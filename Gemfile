@@ -54,6 +54,8 @@ group :development, :test do
   gem "rubocop", "~> 1.26", require: false
   gem "rubocop-checkstyle_formatter", require: false
   gem "rubocop-rails", "~> 2.14.0", require: false
+  gem 'guard'
+  gem 'guard-minitest' # Nếu bạn sử dụng Minitest
 end
 
 group :development do
@@ -72,4 +74,5 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
+  gem 'minitest-reporters'
 end

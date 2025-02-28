@@ -1,13 +1,17 @@
 ENV["RAILS_ENV"] ||= "test"
 require_relative "../config/environment"
 require "rails/test_help"
+require "minitest/reporters"
+
+# Sử dụng minitest-reporters để hiển thị kết quả test rõ ràng hơn
+Minitest::Reporters.use!(Minitest::Reporters::SpecReporter.new)
 
 class ActiveSupport::TestCase
-  # Run tests in parallel with specified workers
+  # Chạy test song song với số worker tương ứng với số CPU
   parallelize(workers: :number_of_processors)
 
-  # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
+  # Load tất cả fixture trong thư mục test/fixtures/*.yml
   fixtures :all
 
-  # Add more helper methods to be used by all tests here...
+  # Thêm các helper method dùng chung cho tất cả các test ở đây...
 end
