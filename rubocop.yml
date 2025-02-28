@@ -1,0 +1,148 @@
+inherit_from: .rubocop_todo.yml
+
+require:
+  - rubocop-performance
+  - rubocop-rails
+
+AllCops:
+  StyleGuideBaseURL: https://rubystyle.guide
+  TargetRubyVersion: 2.7
+  Exclude:
+    - 'db/schema.rb'
+    - 'db/seeds.rb'
+    - 'vendor/**/*'
+    - '**/tmp/**/*'
+    - '**/templates/**/*'
+    - '**/vendor/**/*'
+    - 'actionpack/lib/action_dispatch/journey/parser.rb'
+    - 'railties/test/fixtures/tmp/**/*'
+    - 'actionmailbox/test/dummy/**/*'
+    - 'actiontext/test/dummy/**/*'
+    - '**/node_modules/**/*'
+    - 'config/**/*'
+    - 'bin/**/*'
+    - 'public/**/*'
+    - 'tmp/**/*'
+    - 'log/**/*'
+    - 'test/**/*'
+    - 'lib/tasks/**/*'
+
+Performance:
+  Exclude:
+    - '**/test/**/*'
+
+Rails:
+  Enabled: true
+
+############################# Style #############################
+
+# 日本語のコメントを許可する
+Style/AsciiComments:
+  Enabled: false
+
+# spec ファイルでは {} ブロックを複数行で書くのを許可する
+Style/BlockDelimiters:
+  Exclude:
+    - 'spec/**/*'
+
+# 一部のファイルについてはクラスに関する説明不用
+Style/Documentation:
+  Enabled: false
+  Exclude:
+    - 'db/migrate/*'
+    - 'config/application.rb'
+
+Rails/ReversibleMigration:
+  Enabled: false
+
+Rails/BulkChangeTable:
+  Enabled: false
+
+Rails/InverseOf:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/MutableConstant:
+  Enabled: false
+
+Style/RedundantReturn:
+  Enabled: false
+
+# 文字列はダブルクォートで囲む
+Style/StringLiterals:
+  Enabled: false
+  EnforcedStyle: double_quotes
+
+# 要素数が3個以内の文字列配列については %w %W を使わない宣言を許可する
+Style/WordArray:
+  MinSize: 3
+
+############################# Lint #############################
+
+############################# Metrics #############################
+
+Metrics/AbcSize:
+  Max: 100
+  Exclude:
+    - 'lib/import/staff_factory.rb'
+
+# メソッドの循環的複雑度は 20 まで許容
+Metrics/CyclomaticComplexity:
+  Max: 20
+  Exclude:
+    - 'lib/import/staff_factory.rb'
+
+# メソッドの複雑度は 20 まで許可
+Metrics/PerceivedComplexity:
+  Max: 20
+  Exclude:
+    - 'lib/import/staff_factory.rb'
+
+# ネストは5段まで許可
+Metrics/BlockNesting:
+  Max: 5
+
+# 1行の最大文字数は160文字
+Layout/LineLength:
+  Max: 160
+
+# メソッドの最大行数は100行
+Metrics/MethodLength:
+  Max: 100
+
+# クラスの最大行数は500行
+Metrics/ClassLength:
+  Max: 500
+  Exclude:
+
+# モジュールの最大行数は500行
+Metrics/ModuleLength:
+  Max: 500
+
+# spec ファイルでは1ブロック25行を超えることを許可する
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*'
+
+############################# Naming #############################
+
+# has_ から始まるメソッドを許可する
+Naming/PredicateName:
+  ForbiddenPrefixes:
+    - "is_"
+    - "have_"
+  NamePrefix:
+    - "is_"
+    - "have_"
+
+############################# Layout #############################
+
+Layout/SpaceBeforeFirstArg:
+  Exclude:
+    - 'db/migrate/*.rb'
+
+# 複数行にわたるメソッドのインデントチェックを無効化する
+Layout/MultilineOperationIndentation:
+  Enabled: false
