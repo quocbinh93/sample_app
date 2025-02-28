@@ -7,3 +7,117 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 225ms (Views: 51.5ms | ActiveRecord: 0.0ms | Allocations: 7364)
 
 
+Started GET "/" for 127.0.0.1 at 2025-02-28 02:42:22 +0000
+Processing by ApplicationController#hello as HTML
+  Rendering html template
+  Rendered html template (Duration: 0.1ms | Allocations: 16)
+Completed 200 OK in 43ms (Views: 21.8ms | ActiveRecord: 0.0ms | Allocations: 2341)
+
+
+Started GET "/static_pages/home" for 127.0.0.1 at 2025-02-28 02:42:43 +0000
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 5.9ms | Allocations: 290)
+  Rendered layout layouts/application.html.erb (Duration: 867.7ms | Allocations: 96769)
+Completed 200 OK in 915ms (Views: 873.8ms | ActiveRecord: 0.0ms | Allocations: 99008)
+
+
+Started GET "/static_pages/home" for 127.0.0.1 at 2025-02-28 02:43:45 +0000
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 4.6ms | Allocations: 114)
+  Rendered layout layouts/application.html.erb (Duration: 169.2ms | Allocations: 14853)
+Completed 200 OK in 189ms (Views: 175.8ms | ActiveRecord: 0.0ms | Allocations: 15759)
+
+
+Started GET "/static_pages/help" for 127.0.0.1 at 2025-02-28 02:44:11 +0000
+Processing by StaticPagesController#help as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (Duration: 4.0ms | Allocations: 108)
+  Rendered layout layouts/application.html.erb (Duration: 39.2ms | Allocations: 2552)
+Completed 200 OK in 52ms (Views: 40.2ms | ActiveRecord: 0.0ms | Allocations: 2867)
+
+
+Started GET "/static_pages/home" for 127.0.0.1 at 2025-02-28 02:44:16 +0000
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 34.7ms | Allocations: 2477)
+Completed 200 OK in 45ms (Views: 35.5ms | ActiveRecord: 0.0ms | Allocations: 2736)
+
+
+  [1m[35m (65.1ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  [1m[35m (19.9ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT GET_LOCK('7879438643346964470', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (7.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.3ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2025-02-28 02:46:19.034480', '2025-02-28 02:46:19.034480')[0m
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('7879438643346964470')[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/static_pages/about" for 127.0.0.1 at 2025-02-28 02:49:35 +0000
+Processing by StaticPagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (Duration: 5.1ms | Allocations: 116)
+  Rendered layout layouts/application.html.erb (Duration: 172.4ms | Allocations: 14633)
+Completed 200 OK in 197ms (Views: 181.8ms | ActiveRecord: 0.0ms | Allocations: 15532)
+
+
+Started GET "/static_pages/about" for 127.0.0.1 at 2025-02-28 02:52:12 +0000
+Processing by StaticPagesController#about as HTML
+  Rendering static_pages/about.html.erb
+  Rendered static_pages/about.html.erb (Duration: 3.5ms | Allocations: 114)
+Completed 200 OK in 22ms (Views: 9.9ms | ActiveRecord: 0.0ms | Allocations: 1067)
+
+
+Started GET "/static_pages/home" for 127.0.0.1 at 2025-02-28 02:52:17 +0000
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb
+  Rendered static_pages/home.html.erb (Duration: 4.4ms | Allocations: 113)
+Completed 200 OK in 20ms (Views: 5.6ms | ActiveRecord: 0.0ms | Allocations: 471)
+
+
+Started GET "/static_pages/sample" for 127.0.0.1 at 2025-02-28 02:52:33 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/static_pages/sample"):
+  
+Started GET "/static_pages/sampleapp" for 127.0.0.1 at 2025-02-28 02:52:39 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/static_pages/sampleapp"):
+  
+Started GET "/static_pages/home" for 127.0.0.1 at 2025-02-28 02:52:43 +0000
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb
+  Rendered static_pages/home.html.erb (Duration: 3.6ms | Allocations: 116)
+Completed 200 OK in 21ms (Views: 9.5ms | ActiveRecord: 0.0ms | Allocations: 1028)
+
+
+Started GET "/static_pages/home" for 127.0.0.1 at 2025-02-28 02:55:21 +0000
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb
+  Rendered static_pages/home.html.erb (Duration: 3.7ms | Allocations: 162)
+Completed 200 OK in 22ms (Views: 9.3ms | ActiveRecord: 0.0ms | Allocations: 1111)
+
+
+Started GET "/static_pages/home" for 127.0.0.1 at 2025-02-28 02:55:21 +0000
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb
+  Rendered static_pages/home.html.erb (Duration: 0.1ms | Allocations: 13)
+Completed 200 OK in 10ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 322)
+
+
+Started GET "/static_pages/contact" for 127.0.0.1 at 2025-02-28 03:06:25 +0000
+Processing by StaticPagesController#contact as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (Duration: 4.6ms | Allocations: 132)
+  Rendered layout layouts/application.html.erb (Duration: 43.9ms | Allocations: 1687)
+Completed 200 OK in 66ms (Views: 52.0ms | ActiveRecord: 0.0ms | Allocations: 2586)
+
+
