@@ -121,3 +121,126 @@ Processing by StaticPagesController#contact as HTML
 Completed 200 OK in 66ms (Views: 52.0ms | ActiveRecord: 0.0ms | Allocations: 2586)
 
 
+Started GET "/" for 127.0.0.1 at 2025-02-28 04:19:59 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (8.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 8.3ms | Allocations: 341)
+  Rendered layout layouts/application.html.erb (Duration: 438.8ms | Allocations: 23955)
+Completed 200 OK in 523ms (Views: 456.6ms | ActiveRecord: 0.0ms | Allocations: 27882)
+
+
+Started GET "/static_pages/home" for 127.0.0.1 at 2025-02-28 04:20:05 +0000
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 10)
+  Rendered layout layouts/application.html.erb (Duration: 28.6ms | Allocations: 1277)
+Completed 200 OK in 105ms (Views: 29.4ms | ActiveRecord: 0.0ms | Allocations: 1537)
+
+
+Started GET "/static_pages/about" for 127.0.0.1 at 2025-02-28 04:20:10 +0000
+Processing by StaticPagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (Duration: 3.7ms | Allocations: 136)
+  Rendered layout layouts/application.html.erb (Duration: 29.5ms | Allocations: 1392)
+Completed 200 OK in 42ms (Views: 30.3ms | ActiveRecord: 0.0ms | Allocations: 1708)
+
+
+Started GET "/static_pages/contact" for 127.0.0.1 at 2025-02-28 04:20:16 +0000
+Processing by StaticPagesController#contact as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (Duration: 4.4ms | Allocations: 126)
+  Rendered layout layouts/application.html.erb (Duration: 31.4ms | Allocations: 1376)
+Completed 200 OK in 46ms (Views: 32.5ms | ActiveRecord: 0.0ms | Allocations: 1692)
+
+
+Started GET "/static_pages/help" for 127.0.0.1 at 2025-02-28 04:20:30 +0000
+Processing by StaticPagesController#help as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (Duration: 3.7ms | Allocations: 129)
+  Rendered layout layouts/application.html.erb (Duration: 32.6ms | Allocations: 1382)
+Completed 200 OK in 46ms (Views: 33.6ms | ActiveRecord: 0.0ms | Allocations: 1699)
+
+
+Started GET "/" for 127.0.0.1 at 2025-02-28 06:22:47 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (5.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 9.5ms | Allocations: 341)
+  Rendered layout layouts/application.html.erb (Duration: 375.8ms | Allocations: 23932)
+Completed 200 OK in 466ms (Views: 397.0ms | ActiveRecord: 0.0ms | Allocations: 27858)
+
+
+Started GET "/" for 127.0.0.1 at 2025-02-28 08:12:28 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (13.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 6.1ms | Allocations: 341)
+  Rendered layout layouts/application.html.erb (Duration: 253.5ms | Allocations: 24064)
+Completed 500 Internal Server Error in 326ms (ActiveRecord: 0.0ms | Allocations: 28162)
+
+
+  
+ActionView::Template::Error (link_tree argument must be a directory):
+  
+app/assets/config/manifest.js:3
+Started GET "/" for 127.0.0.1 at 2025-02-28 08:19:29 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 6.7ms | Allocations: 299)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: bfdec89faf450ef5f25b
+Version: webpack 4.47.0
+Time: 5766ms
+Built at: 02/28/2025 8:19:44 AM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-d70158a08cd1997d941c.js   5.35 KiB  application  [emitted] [immutable]  application
+js/application-d70158a08cd1997d941c.js.map   3.53 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-d70158a08cd1997d941c.js js/application-d70158a08cd1997d941c.js.map
+[./app/javascript/packs/application.js] 1.45 KiB {application} [built] [failed] [1 error]
+
+ERROR in ./app/javascript/packs/application.js
+Module build failed (from /mnt/c/Users/QUOC BINH/node_modules/babel-loader/lib/index.js):
+Error: [BABEL]: --- PLACEHOLDER PACKAGE ---
+This @babel/plugin-proposal-private-property-in-object version is not meant to
+be imported. Something is importing
+@babel/plugin-proposal-private-property-in-object without declaring it in its
+dependencies (or devDependencies) in the package.json file.
+Add "@babel/plugin-proposal-private-property-in-object" to your devDependencies
+to work around this error. This will make this message go away.
+ (While processing: /mnt/c/Users/QUOC BINH/node_modules/@babel/plugin-proposal-private-property-in-object/lib/index.js)
+    at Object.<anonymous> (/mnt/c/Users/QUOC BINH/node_modules/@babel/plugin-proposal-private-property-in-object/lib/index.js:28:7)
+    at Module._compile (/mnt/c/Users/QUOC BINH/node_modules/v8-compile-cache/v8-compile-cache.js:192:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1414:10)
+    at Module.load (node:internal/modules/cjs/loader:1197:32)
+    at Module._load (node:internal/modules/cjs/loader:1013:12)
+    at Module.require (node:internal/modules/cjs/loader:1225:19)
+    at require (/mnt/c/Users/QUOC BINH/node_modules/v8-compile-cache/v8-compile-cache.js:159:20)
+    at loadPartialConfigAsync (/mnt/c/Users/QUOC BINH/node_modules/@babel/core/lib/config/index.js:34:85)
+    at Object.<anonymous> (/mnt/c/Users/QUOC BINH/node_modules/babel-loader/lib/index.js:133:26)
+
+  Rendered layout layouts/application.html.erb (Duration: 16322.9ms | Allocations: 30930)
+Completed 200 OK in 16393ms (Views: 16338.3ms | ActiveRecord: 0.0ms | Allocations: 34842)
+
+
+Started GET "/static_pages/help" for 127.0.0.1 at 2025-02-28 08:23:26 +0000
+Processing by StaticPagesController#help as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (Duration: 5.1ms | Allocations: 143)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 167.4ms | Allocations: 3211)
+Completed 200 OK in 194ms (Views: 180.1ms | ActiveRecord: 0.0ms | Allocations: 4019)
+
+

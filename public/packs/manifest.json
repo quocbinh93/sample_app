@@ -1,0 +1,14 @@
+{
+  "application.js": "/packs/js/application-d70158a08cd1997d941c.js",
+  "application.js.map": "/packs/js/application-d70158a08cd1997d941c.js.map",
+  "entrypoints": {
+    "application": {
+      "js": [
+        "/packs/js/application-d70158a08cd1997d941c.js"
+      ],
+      "js.map": [
+        "/packs/js/application-d70158a08cd1997d941c.js.map"
+      ]
+    }
+  }
+}
