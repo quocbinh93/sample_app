@@ -73,6 +73,7 @@ GEM
     autoprefixer-rails (10.4.19.0)
       execjs (~> 2)
     base64 (0.1.1)
+    bcrypt (3.1.20)
     bindex (0.8.1)
     bootsnap (1.16.0)
       msgpack (~> 1.2)
@@ -130,6 +131,10 @@ GEM
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
     json (2.6.3)
+    kredis (1.7.0)
+      activemodel (>= 6.0.0)
+      activesupport (>= 6.0.0)
+      redis (>= 4.2, < 6)
     language_server-protocol (3.17.0.3)
     listen (3.9.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
@@ -227,6 +232,7 @@ GEM
     rb-fsevent (0.11.2)
     rb-inotify (0.11.1)
       ffi (~> 1.0)
+    redis (4.8.1)
     regexp_parser (2.8.1)
     reline (0.3.7)
       io-console (~> 0.5)
@@ -253,8 +259,6 @@ GEM
       rubocop (>= 1.7.0, < 2.0)
     ruby-progressbar (1.13.0)
     rubyzip (2.3.2)
-    sass-rails (6.0.0)
-      sassc-rails (~> 2.1, >= 2.1.1)
     sassc (2.4.0)
       ffi (~> 1.9)
     sassc-rails (2.1.2)
@@ -314,6 +318,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  bcrypt (~> 3.1.7)
   bootsnap
   bootstrap
   capybara
@@ -322,15 +327,17 @@ DEPENDENCIES
   guard-minitest
   importmap-rails
   jbuilder
+  kredis
   minitest-reporters
   mysql2 (~> 0.5)
   puma (~> 5.0)
   rails (~> 7.0.5)
   rails-controller-testing
+  redis (~> 4.0)
   rubocop (~> 1.26)
   rubocop-checkstyle_formatter
   rubocop-rails (~> 2.14.0)
-  sass-rails
+  sassc-rails
   selenium-webdriver
   sprockets-rails
   stimulus-rails
