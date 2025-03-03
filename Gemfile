@@ -27,6 +27,12 @@ gem "stimulus-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
+# Boostrap and Sprockets
+gem "bootstrap"
+
+# SCSS
+gem "sass-rails"
+
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
@@ -79,4 +85,6 @@ group :test do
 end
 
 gem 'webpacker', '~> 5.0'
+
+gem 'rails-controller-testing'
 
