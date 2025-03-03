@@ -4151,3 +4151,30 @@ Completed 200 OK in 89ms (Views: 79.9ms | ActiveRecord: 0.5ms | Allocations: 122
 
   [1m[36mUser Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM `users`[0m
   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` ORDER BY `users`.`id` ASC LIMIT 1[0m
+Started GET "/" for 127.0.0.1 at 2025-03-03 07:35:04 +0000
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 14.3ms | Allocations: 804)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 11)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 121)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 57.0ms | Allocations: 7416)
+Completed 200 OK in 63ms (Views: 58.1ms | ActiveRecord: 0.0ms | Allocations: 7924)
+
+
+Started GET "/" for 127.0.0.1 at 2025-03-03 07:38:51 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 671.6ms | Allocations: 28809)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 3.0ms | Allocations: 101)
+  Rendered layouts/_header.html.erb (Duration: 3.2ms | Allocations: 309)
+  Rendered layouts/_footer.html.erb (Duration: 3.8ms | Allocations: 213)
+  Rendered layout layouts/application.html.erb (Duration: 745.4ms | Allocations: 36998)
+Completed 200 OK in 797ms (Views: 756.7ms | ActiveRecord: 0.0ms | Allocations: 40919)
+
+
