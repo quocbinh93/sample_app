@@ -84,4 +84,6 @@ gem 'webpacker', '~> 5.0'
 
 gem 'rails-controller-testing'
 
-gem 'bootstrap-sass', '~> 3.3.6' 
+gem 'bootstrap-sass', '~> 3.3.6'
+
+gem 'hotwire-rails' 

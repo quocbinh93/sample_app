@@ -122,6 +122,10 @@ GEM
     guard-minitest (2.4.6)
       guard-compat (~> 1.2)
       minitest (>= 3.0)
+    hotwire-rails (0.1.3)
+      rails (>= 6.0.0)
+      stimulus-rails
+      turbo-rails
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
     importmap-rails (1.2.1)
@@ -336,6 +340,7 @@ DEPENDENCIES
   debug
   guard
   guard-minitest
+  hotwire-rails
   importmap-rails
   jbuilder
   kredis
@@ -348,7 +353,7 @@ DEPENDENCIES
   rubocop (~> 1.26)
   rubocop-checkstyle_formatter
   rubocop-rails (~> 2.14.0)
-  sass-rails (>= 3.2)
+  sass-rails
   selenium-webdriver
   sprockets-rails
   stimulus-rails
