@@ -1,6 +1,12 @@
 require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
+  # config/environments/development.rb
+  Rails.application.routes.default_url_options[:host] = 'localhost:3000'
+
+  # Allow connections to local server on cloud IDE.
+  config.hosts.clear
+
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded any time
@@ -68,6 +74,5 @@ Rails.application.configure do
   # Uncomment if you wish to allow Action Cable access from any origin.
   # config.action_cable.disable_request_forgery_protection = true
 
-  # Allow connections to local server on cloud IDE.
-  config.hosts.clear
+  
 end

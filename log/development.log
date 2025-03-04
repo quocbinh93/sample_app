@@ -12914,3 +12914,1383 @@ Processing by UsersController#index as HTML
 Completed 200 OK in 96ms (Views: 85.4ms | ActiveRecord: 1.3ms | Allocations: 28764)
 
 
+Started GET "/" for 127.0.0.1 at 2025-03-04 04:38:35 +0000
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 3.2ms | Allocations: 356)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 2.2ms | Allocations: 94)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 6.1ms | Allocations: 2179)
+  Rendered layouts/_footer.html.erb (Duration: 2.4ms | Allocations: 207)
+  Rendered layout layouts/application.html.erb (Duration: 41.2ms | Allocations: 5990)
+Completed 200 OK in 54ms (Views: 45.6ms | ActiveRecord: 0.6ms | Allocations: 6800)
+
+
+Started GET "/" for 127.0.0.1 at 2025-03-04 04:38:36 +0000
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.3ms | Allocations: 146)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 9)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 4.2ms | Allocations: 1822)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 29.2ms | Allocations: 4593)
+Completed 200 OK in 35ms (Views: 29.6ms | ActiveRecord: 0.4ms | Allocations: 4843)
+
+
+Started GET "/help" for 127.0.0.1 at 2025-03-04 04:38:37 +0000
+Processing by StaticPagesController#help as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (Duration: 2.8ms | Allocations: 127)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 9)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 3.5ms | Allocations: 1831)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 27.8ms | Allocations: 4623)
+Completed 200 OK in 35ms (Views: 28.1ms | ActiveRecord: 0.3ms | Allocations: 4927)
+
+
+Started GET "/users" for 127.0.0.1 at 2025-03-04 04:38:37 +0000
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `users`[0m
+  ↳ app/views/users/index.html.erb:4
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` LIMIT 30 OFFSET 0[0m
+  ↳ app/views/users/index.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendered collection of users/_user.html.erb [30 times] (Duration: 29.8ms | Allocations: 18431)
+  Rendered users/index.html.erb within layouts/application (Duration: 38.9ms | Allocations: 21781)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 11)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 3.0ms | Allocations: 1755)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 63.0ms | Allocations: 26092)
+Completed 200 OK in 75ms (Views: 64.6ms | ActiveRecord: 1.1ms | Allocations: 27408)
+
+
+Started GET "/logout" for 127.0.0.1 at 2025-03-04 04:38:39 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/logout" for 127.0.0.1 at 2025-03-04 04:43:10 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/users" for 127.0.0.1 at 2025-03-04 04:43:12 +0000
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM `users`[0m
+  ↳ app/views/users/index.html.erb:4
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` LIMIT 30 OFFSET 0[0m
+  ↳ app/views/users/index.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendered collection of users/_user.html.erb [30 times] (Duration: 25.1ms | Allocations: 17945)
+  Rendered users/index.html.erb within layouts/application (Duration: 40.5ms | Allocations: 21817)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 2.8ms | Allocations: 94)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 5.2ms | Allocations: 2045)
+  Rendered layouts/_footer.html.erb (Duration: 2.7ms | Allocations: 207)
+  Rendered layout layouts/application.html.erb (Duration: 87.8ms | Allocations: 27124)
+Completed 200 OK in 172ms (Views: 91.7ms | ActiveRecord: 30.1ms | Allocations: 33595)
+
+
+Started GET "/" for 127.0.0.1 at 2025-03-04 04:43:14 +0000
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.7ms | Allocations: 361)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 11)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 3.3ms | Allocations: 1818)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 23.1ms | Allocations: 4896)
+Completed 200 OK in 32ms (Views: 25.1ms | ActiveRecord: 0.3ms | Allocations: 5531)
+
+
+Started GET "/users/101" for 127.0.0.1 at 2025-03-04 04:43:16 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"101"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 3.0ms | Allocations: 212)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 9)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 3.2ms | Allocations: 1712)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 28.7ms | Allocations: 4500)
+Completed 200 OK in 39ms (Views: 29.4ms | ActiveRecord: 0.4ms | Allocations: 5891)
+
+
+Started GET "/logout" for 127.0.0.1 at 2025-03-04 04:43:18 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/users/101/edit" for 127.0.0.1 at 2025-03-04 04:43:25 +0000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"101"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:70:in `correct_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:31:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 2.7ms | Allocations: 213)
+  Rendered users/edit.html.erb within layouts/application (Duration: 10.5ms | Allocations: 1967)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 2.5ms | Allocations: 92)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 5.9ms | Allocations: 2056)
+  Rendered layouts/_footer.html.erb (Duration: 3.0ms | Allocations: 207)
+  Rendered layout layouts/application.html.erb (Duration: 51.9ms | Allocations: 7344)
+Completed 200 OK in 69ms (Views: 56.5ms | ActiveRecord: 0.5ms | Allocations: 10135)
+
+
+Started GET "/logout" for 127.0.0.1 at 2025-03-04 04:43:27 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/users/101" for 127.0.0.1 at 2025-03-04 04:43:33 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"101"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 2.5ms | Allocations: 211)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 9)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.9ms | Allocations: 1712)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 22.2ms | Allocations: 4587)
+Completed 200 OK in 29ms (Views: 22.8ms | ActiveRecord: 0.4ms | Allocations: 5403)
+
+
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT GET_LOCK('7879438643346964470', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to AddActivationToUsers (20250304044605)
+  [1m[35m (48.0ms)[0m  [1m[35mALTER TABLE `users` ADD `activation_digest` varchar(255)[0m
+  [1m[35m (20.9ms)[0m  [1m[35mALTER TABLE `users` ADD `activated` tinyint(1) DEFAULT FALSE[0m
+  [1m[35m (16.0ms)[0m  [1m[35mALTER TABLE `users` ADD `activated_at` datetime[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.0ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20250304044605')[0m
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('7879438643346964470')[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.6ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (66.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS `rails_tutorial_development`[0m
+  [1m[35m (8.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS `rails_tutorial_test`[0m
+  [1m[35m (6.4ms)[0m  [1m[35mCREATE DATABASE `rails_tutorial_development` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE DATABASE `rails_tutorial_test` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[35m (18.4ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  [1m[35m (16.0ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('7879438643346964470', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateUsers (20250303034211)
+  [1m[35m (16.7ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `email` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20250303034211')[0m
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddIndexToUsersEmail (20250303041246)
+  [1m[35m (14.7ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_email` ON `users` (`email`)[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20250303041246')[0m
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddPasswordDigestToUsers (20250303041452)
+  [1m[35m (28.7ms)[0m  [1m[35mALTER TABLE `users` ADD `password_digest` varchar(255)[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20250303041452')[0m
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddRememberDigestToUsers (20250304014415)
+  [1m[35m (30.8ms)[0m  [1m[35mALTER TABLE `users` ADD `remember_digest` varchar(255)[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20250304014415')[0m
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateActiveStorageTables (20250304040958)
+  [1m[35m (18.4ms)[0m  [1m[35mCREATE TABLE `active_storage_blobs` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `key` varchar(255) NOT NULL, `filename` varchar(255) NOT NULL, `content_type` varchar(255), `metadata` text, `service_name` varchar(255) NOT NULL, `byte_size` bigint NOT NULL, `checksum` varchar(255), `created_at` datetime(6) NOT NULL, UNIQUE INDEX `index_active_storage_blobs_on_key` (`key`))[0m
+  [1m[35m (30.6ms)[0m  [1m[35mCREATE TABLE `active_storage_attachments` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255) NOT NULL, `record_type` varchar(255) NOT NULL, `record_id` bigint NOT NULL, `blob_id` bigint NOT NULL, `created_at` datetime(6) NOT NULL, INDEX `index_active_storage_attachments_on_blob_id` (`blob_id`), UNIQUE INDEX `index_active_storage_attachments_uniqueness` (`record_type`, `record_id`, `name`, `blob_id`), CONSTRAINT `fk_rails_c3b3935057`
+FOREIGN KEY (`blob_id`)
+  REFERENCES `active_storage_blobs` (`id`)
+)[0m
+  [1m[35m (22.8ms)[0m  [1m[35mCREATE TABLE `active_storage_variant_records` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `blob_id` bigint NOT NULL, `variation_digest` varchar(255) NOT NULL, UNIQUE INDEX `index_active_storage_variant_records_uniqueness` (`blob_id`, `variation_digest`), CONSTRAINT `fk_rails_993965df05`
+FOREIGN KEY (`blob_id`)
+  REFERENCES `active_storage_blobs` (`id`)
+)[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20250304040958')[0m
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddAdminToUsers (20250304042416)
+  [1m[35m (29.6ms)[0m  [1m[35mALTER TABLE `users` ADD `admin` tinyint(1)[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20250304042416')[0m
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddActivationToUsers (20250304044605)
+  [1m[35m (30.4ms)[0m  [1m[35mALTER TABLE `users` ADD `activation_digest` varchar(255)[0m
+  [1m[35m (30.4ms)[0m  [1m[35mALTER TABLE `users` ADD `activated` tinyint(1) DEFAULT FALSE[0m
+  [1m[35m (28.2ms)[0m  [1m[35mALTER TABLE `users` ADD `activated_at` datetime[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20250304044605')[0m
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2025-03-04 04:52:39.715656', '2025-03-04 04:52:39.715656')[0m
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('7879438643346964470')[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Example User', 'example@railstutorial.org', '2025-03-04 04:52:46.565155', '2025-03-04 04:52:46.565155', '$2a$12$wJBy.eUMlRnkVMIs20oIpu2WdydjLPR9OaTKnE40GX9s1vJvkE5gu', NULL, TRUE, '$2a$12$LZ0J7AimwYfs6/WBoHcr2e2qd4qw8.UMrRoDkNBf.ON2oURJL0n6m', TRUE, '2025-03-04 04:52:46')[0m
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-1@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Rev. Christina Schamberger', 'example-1@railstutorial.org', '2025-03-04 04:52:47.610628', '2025-03-04 04:52:47.610628', '$2a$12$sO5khd1kvjJUSKuMpGNIROgkaIG3nWYQdDz0tbhlB4H6fHQAnCLNy', NULL, NULL, '$2a$12$9Cw1RyMrXmq8hvbpXhz66OzHmnqLd03Q4aW8.R/YUNVjH0e2sakVq', TRUE, '2025-03-04 04:52:47')[0m
+  [1m[36mTRANSACTION (4.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-2@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Annamarie O\'Reilly Esq.', 'example-2@railstutorial.org', '2025-03-04 04:52:47.935925', '2025-03-04 04:52:47.935925', '$2a$12$kFBDlZtBfSgUtR5nOpZqzu0W5F9hYo6x0bJ5UKJ7UPY65ozhmv9ga', NULL, NULL, '$2a$12$COE6B4as1SrKRGx8e/8ruOy5sSL8TjMVgU0Si71p1VUFmubFxGsHG', TRUE, '2025-03-04 04:52:47')[0m
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-3@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Silvia Wyman', 'example-3@railstutorial.org', '2025-03-04 04:52:48.266002', '2025-03-04 04:52:48.266002', '$2a$12$YSGfHc4AtWz0T3WrWOhsbepkQVFLCE95/nFHEu3JpppFmHPOJ21By', NULL, NULL, '$2a$12$HIIjT3ekdaJiVrjRM8z9tO2zGs/Z4xWiALYfPcSCsVgr.fH7u13nK', TRUE, '2025-03-04 04:52:48')[0m
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-4@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Prof. Ellis Rippin', 'example-4@railstutorial.org', '2025-03-04 04:52:48.594944', '2025-03-04 04:52:48.594944', '$2a$12$Xa.BQsPgKX79rzjjP.ZqYOLInJF8OhC6TN/DK7LDC7ie74rvrSYae', NULL, NULL, '$2a$12$ya/bVVkXo0uOcwMv3SgWOu6Gc590hjtDSuFPBpZhwLVbfucruq78W', TRUE, '2025-03-04 04:52:48')[0m
+  [1m[36mTRANSACTION (3.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-5@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Thad Halvorson', 'example-5@railstutorial.org', '2025-03-04 04:52:48.934409', '2025-03-04 04:52:48.934409', '$2a$12$OZ1m0WpRpp767ZYoxD5z6eUYArw8quC2dOf91LkOsxvg9KFbwFfS2', NULL, NULL, '$2a$12$RneagHIPgA9KHOEFJDrWN.uNQCUpHdJX/B94rYjPBr5CHLOHD2h4S', TRUE, '2025-03-04 04:52:48')[0m
+  [1m[36mTRANSACTION (3.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-6@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Dee Yundt MD', 'example-6@railstutorial.org', '2025-03-04 04:52:49.267804', '2025-03-04 04:52:49.267804', '$2a$12$rQ.55jBlAoQ7hj/NES0sc.PQxMgvLMkh9MlDpiE6.4rxRD3q8Jpta', NULL, NULL, '$2a$12$TX1FRLIPA1zeZPqdnfYeyOlbakTJKTbufO5plezYHfM3LanALTKw2', TRUE, '2025-03-04 04:52:49')[0m
+  [1m[36mTRANSACTION (4.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-7@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Bernard Roob', 'example-7@railstutorial.org', '2025-03-04 04:52:49.606400', '2025-03-04 04:52:49.606400', '$2a$12$SmB/eJViM.EU/yJgY.UIseBXnJugnijxEj3ojSyAV76l54vNworo.', NULL, NULL, '$2a$12$wExAcKGHzeqE.I15UciG6uqm4nwfp6Z94QGoYmNC.fjKtDhsRRDxa', TRUE, '2025-03-04 04:52:49')[0m
+  [1m[36mTRANSACTION (3.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-8@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Miss Eric Ernser', 'example-8@railstutorial.org', '2025-03-04 04:52:49.940202', '2025-03-04 04:52:49.940202', '$2a$12$6IVvY8BKCOeVkHLj4BC6XO9JrX5OZCeMghkQLoQPhR4Yovs5XtBJ6', NULL, NULL, '$2a$12$IWs/bcPTDLOdAxzUZ8UTbOO2euky9C/9U9wsd..HFFLHVEx6DccbW', TRUE, '2025-03-04 04:52:49')[0m
+  [1m[36mTRANSACTION (4.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-9@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Grant Barton MD', 'example-9@railstutorial.org', '2025-03-04 04:52:50.272102', '2025-03-04 04:52:50.272102', '$2a$12$LdZ3a8rOzKt6fxnjTBg9VOmNEMy/XRhUO..DmWbIaG0xDvlb09rge', NULL, NULL, '$2a$12$BRh/WgArhE7htn8muRmOe.IobXlnbNZoOfnC4tT9j7opUqfflBNcq', TRUE, '2025-03-04 04:52:50')[0m
+  [1m[36mTRANSACTION (3.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-10@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Jacquie Heathcote', 'example-10@railstutorial.org', '2025-03-04 04:52:50.597522', '2025-03-04 04:52:50.597522', '$2a$12$uCmJf4phtcR4K65BxV3rbeSOaqh/6geGxAwiv4NajC.Ct5zsfQ6oK', NULL, NULL, '$2a$12$DVy9foLtgmwjzAs/3xy71.Y2IBavNgr2JuKbb46o/cChH8gT8DE5u', TRUE, '2025-03-04 04:52:50')[0m
+  [1m[36mTRANSACTION (4.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-11@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Paul Bartell', 'example-11@railstutorial.org', '2025-03-04 04:52:50.935719', '2025-03-04 04:52:50.935719', '$2a$12$quO1tuvrQOojhpNIDhbG4.yYGPg3Nsn9n7CHKIqJ2N.Sqp4xfovx6', NULL, NULL, '$2a$12$xZ2F2.v9QQ6E89YXPvN2EOo5qapdmisPIp.A4SfMQhAgGExs.QEa6', TRUE, '2025-03-04 04:52:50')[0m
+  [1m[36mTRANSACTION (4.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-12@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Dr. Joeann Johnson', 'example-12@railstutorial.org', '2025-03-04 04:52:51.265263', '2025-03-04 04:52:51.265263', '$2a$12$8RgII3GjuOOX28vJ8or/4uLvWw9jWzMKAzjKRAACiUjxdVQ..mEYK', NULL, NULL, '$2a$12$soIQqApPgB/IdppSVmtUZul1mLl1qDAp8wOl3aQR.P12x1AbBJ.Qy', TRUE, '2025-03-04 04:52:51')[0m
+  [1m[36mTRANSACTION (3.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-13@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Gale Goodwin', 'example-13@railstutorial.org', '2025-03-04 04:52:51.608995', '2025-03-04 04:52:51.608995', '$2a$12$xSNSTjx3gyC2wnpHsp8lr.a262Q9BmT6luryTP8sQJDWnwwSWhjGu', NULL, NULL, '$2a$12$2NpS3n9b/fbeCRBK.Ys3Beo0avtQH5lbaLsNhnGyiG8nRH2EEpYBC', TRUE, '2025-03-04 04:52:51')[0m
+  [1m[36mTRANSACTION (3.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-14@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Fr. Saundra Cormier', 'example-14@railstutorial.org', '2025-03-04 04:52:51.949887', '2025-03-04 04:52:51.949887', '$2a$12$4/IQX9T2VdAfwljR1QoUj.YFmCT5grvXS40sP5UZ410DMXdAzzsSm', NULL, NULL, '$2a$12$jNrvGYkktFgf5xCv0xLnyOJJ21PQ9uZoIG8uCoMSorW3wMeu7Yr4y', TRUE, '2025-03-04 04:52:51')[0m
+  [1m[36mTRANSACTION (3.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-15@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Rep. Sherrie Adams', 'example-15@railstutorial.org', '2025-03-04 04:52:52.287436', '2025-03-04 04:52:52.287436', '$2a$12$sf37kpSTxVM7/rGLvWz5VunOJz1s99cUXGa8R8eqNt36oQngCfBmm', NULL, NULL, '$2a$12$4U7lXhW/E7EltXcSPpQ0MeulCrRsADaRrJaFnG2KOf3.AeoNpSnHe', TRUE, '2025-03-04 04:52:52')[0m
+  [1m[36mTRANSACTION (4.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-16@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Lamar Baumbach', 'example-16@railstutorial.org', '2025-03-04 04:52:52.624215', '2025-03-04 04:52:52.624215', '$2a$12$z.n7RQBQJDLAXlnMT2ots.EwBMK/Sgxqcai4vfW4r7ga9GWwhCCNK', NULL, NULL, '$2a$12$ux.k4g9WYrcuXLRLAei5ueHWbaCYriVEdlYVS.KSAQQKYT9e9VIsS', TRUE, '2025-03-04 04:52:52')[0m
+  [1m[36mTRANSACTION (3.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-17@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Wanda Dickinson', 'example-17@railstutorial.org', '2025-03-04 04:52:52.958944', '2025-03-04 04:52:52.958944', '$2a$12$ZeKV1gkJ/RNbnYupXB4d..h80OISxHSO8xbxm9GqKIl2npiFl8pPC', NULL, NULL, '$2a$12$UzeoslBvw8wVkjykaPNffeDQGtrWsYa5yP2NGDCXWe1gKa.bmOdOO', TRUE, '2025-03-04 04:52:52')[0m
+  [1m[36mTRANSACTION (3.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-18@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Ben Runolfsson', 'example-18@railstutorial.org', '2025-03-04 04:52:56.151457', '2025-03-04 04:52:56.151457', '$2a$12$doSfqeFUuj5owF1RSH60L.WKpr9V9pZCxwu5WpeTSSJwKlkO8miG6', NULL, NULL, '$2a$12$Sp6A4uPu/LtDOy740QIT9u4vUdGQA9dXYCDP161DYBIrcNaq8U82y', TRUE, '2025-03-04 04:52:53')[0m
+  [1m[36mTRANSACTION (4.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-19@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Lewis Barrows', 'example-19@railstutorial.org', '2025-03-04 04:52:56.479021', '2025-03-04 04:52:56.479021', '$2a$12$T.BV4AUK7VWUo/9PKRzqAuYk0FUvDYYC8YzhUmy5FpgQO333wqh/q', NULL, NULL, '$2a$12$NuhBHqGkEwSlhnQkYyoNAuQQnrFwRri1gmBQsHLXkIWKw1X3jgwoi', TRUE, '2025-03-04 04:52:56')[0m
+  [1m[36mTRANSACTION (4.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-20@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Wayne Osinski', 'example-20@railstutorial.org', '2025-03-04 04:52:56.811162', '2025-03-04 04:52:56.811162', '$2a$12$lvRNdO5PWVKyScf.38ezO.IcBDtw4slRLn0.e27sZTL2jrs6me/bC', NULL, NULL, '$2a$12$MoSTycHkz7i3VsqUgImTEO6KDK/oljddaHBQnomgUfhpR/EgL.2v2', TRUE, '2025-03-04 04:52:56')[0m
+  [1m[36mTRANSACTION (3.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-21@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Ranae Hettinger', 'example-21@railstutorial.org', '2025-03-04 04:52:57.164958', '2025-03-04 04:52:57.164958', '$2a$12$Nt3TZyePtAV0JYoJdU5.1OEexnLPu4ci3Xdz7nEwePUtWNIN1mdvC', NULL, NULL, '$2a$12$tE6Qfe1nVL.FjskeBog9iOOpGJzea04S6XCXTFUNlGrepwxXNkopa', TRUE, '2025-03-04 04:52:56')[0m
+  [1m[36mTRANSACTION (3.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-22@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Harriette Hand', 'example-22@railstutorial.org', '2025-03-04 04:52:57.516062', '2025-03-04 04:52:57.516062', '$2a$12$hE7sASFk1r/XlUy0BUM0D.Ulp9Po4fm7a5Qholw485wRHiYuUAzg2', NULL, NULL, '$2a$12$TmDptCG/80mQOu9D6NMr0eoyyWBbNbJIu78YIwMy/rkTc20B0aDJy', TRUE, '2025-03-04 04:52:57')[0m
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-23@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Amb. Rocky Spinka', 'example-23@railstutorial.org', '2025-03-04 04:52:57.856582', '2025-03-04 04:52:57.856582', '$2a$12$EzckxlRnCFIN5HgbhOEwVuNkxojajlly6QntEalkQL2ftN1Byu6BW', NULL, NULL, '$2a$12$gunwKobB8ixEeDCvBBr75u9.csAJ7Gg1qukhegZvcaFq2hDh/aiIu', TRUE, '2025-03-04 04:52:57')[0m
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-24@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Santo Grimes', 'example-24@railstutorial.org', '2025-03-04 04:52:58.195974', '2025-03-04 04:52:58.195974', '$2a$12$rmTdeyyp9DGX6ZuDJlfpYeylRyhI9sXHhvv/u3FSfSKtD0KQG9ABq', NULL, NULL, '$2a$12$ZiEY5eg6KurZvK6nGjhsyeefqmRwBg3rYC71MTpP4DjnmOWsZ8lOm', TRUE, '2025-03-04 04:52:58')[0m
+  [1m[36mTRANSACTION (4.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-25@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Amb. Francis Bergnaum', 'example-25@railstutorial.org', '2025-03-04 04:52:58.524509', '2025-03-04 04:52:58.524509', '$2a$12$M1VP6qzJfTW0oNP/rHd5jeasnBtKjDB1ImNzZ5Om7Ioz6pK7ed9z6', NULL, NULL, '$2a$12$MhDgBJkq4NboM2.2RqAkO.Rz4ggaT0GfQvdLv4ABbe6s7GXUZAQUS', TRUE, '2025-03-04 04:52:58')[0m
+  [1m[36mTRANSACTION (4.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-26@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Sen. Jamika Senger', 'example-26@railstutorial.org', '2025-03-04 04:52:58.851231', '2025-03-04 04:52:58.851231', '$2a$12$66fzFkY0tZSAF9vid9o1aepBovMM8wVOkpqngZ//556xVjvs5kAbu', NULL, NULL, '$2a$12$B4izN8KdDuMT170f8p0jlOs.R0vlmjg.0t.zf7APTcwe1sqKF6BkS', TRUE, '2025-03-04 04:52:58')[0m
+  [1m[36mTRANSACTION (3.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-27@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Arnold Emmerich', 'example-27@railstutorial.org', '2025-03-04 04:52:59.175668', '2025-03-04 04:52:59.175668', '$2a$12$11GOxK69Smn4I8xJTl73.uQj0tiK4kuspwe/JpC18iyuzp3w6q5Ku', NULL, NULL, '$2a$12$i6/mB1Lbs/9K5Xn0q/zxb.dehpbeK4w1CISbO2A584nYo7qf1m5Ym', TRUE, '2025-03-04 04:52:59')[0m
+  [1m[36mTRANSACTION (4.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-28@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Ms. Louie Robel', 'example-28@railstutorial.org', '2025-03-04 04:52:59.497014', '2025-03-04 04:52:59.497014', '$2a$12$8wpn.3oJbH1A617HD5SYwOq7hpafsa4jMzz3M9M89WeGijTn6I7uy', NULL, NULL, '$2a$12$L5ArRYC0cJc5Y.Phxc.Ed.5la0BzglKg95.nh1CM/e8ljC4cRsf8.', TRUE, '2025-03-04 04:52:59')[0m
+  [1m[36mTRANSACTION (4.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-29@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Monroe Boyer', 'example-29@railstutorial.org', '2025-03-04 04:52:59.829355', '2025-03-04 04:52:59.829355', '$2a$12$S2bvLt6OlaO0y0LGUAiHbeoDzQWBsJVQzsVhywdYx0UTxtkATatLq', NULL, NULL, '$2a$12$//nUNJhrn.BoSIvV40sgOu.CPPEnhP1MhFkIHv/e/nzz0oiuRtF2m', TRUE, '2025-03-04 04:52:59')[0m
+  [1m[36mTRANSACTION (3.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-30@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Sen. Derek Lakin', 'example-30@railstutorial.org', '2025-03-04 04:53:00.170968', '2025-03-04 04:53:00.170968', '$2a$12$WhCMnEMnoWaypSKMUxtbheUsitSBlmvDml9Skkcxwp7R0yt.Xmd92', NULL, NULL, '$2a$12$5dgV73FAJq5tH6datH/Xv.LQkU7FLnUYEV7lZTdHv35spGkBuz/zG', TRUE, '2025-03-04 04:53:00')[0m
+  [1m[36mTRANSACTION (4.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-31@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Otto Hessel', 'example-31@railstutorial.org', '2025-03-04 04:53:00.508261', '2025-03-04 04:53:00.508261', '$2a$12$oZcoy3kTmNgQvbS/GILLM.XG.2lLpUDsQyqbaZXzTuFBOOyP2eCt6', NULL, NULL, '$2a$12$2WTgdY19u5gSmEr9sVc7u.8CrUVVbVfPKTebAUKTsTdKdrgg0x4x6', TRUE, '2025-03-04 04:53:00')[0m
+  [1m[36mTRANSACTION (4.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-32@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Elfriede Parker', 'example-32@railstutorial.org', '2025-03-04 04:53:00.845913', '2025-03-04 04:53:00.845913', '$2a$12$QVNvu.pyeel5ocMoc0T8su.P/wetsVuVRsjB/KxaW7gtKt/qW0Xwe', NULL, NULL, '$2a$12$5sMV4tbmaZEhFmlUgxp5DuEQpGZhjK2BDKCZnasW7GB4aJ51HlCiK', TRUE, '2025-03-04 04:53:00')[0m
+  [1m[36mTRANSACTION (4.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-33@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Ngoc Schaefer', 'example-33@railstutorial.org', '2025-03-04 04:53:01.180415', '2025-03-04 04:53:01.180415', '$2a$12$8oD4DwZfD4C1fvLBUOYD3ufi133OjFOpcRPdnzCIpuuqOmU1ydq8e', NULL, NULL, '$2a$12$GiWD2QmzMestxvgxrJBFBeqNXbLoABclQhugkfQRIybfqoWJ6fNHq', TRUE, '2025-03-04 04:53:01')[0m
+  [1m[36mTRANSACTION (4.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-34@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Fr. Mohammad Schmeler', 'example-34@railstutorial.org', '2025-03-04 04:53:01.510957', '2025-03-04 04:53:01.510957', '$2a$12$ITGcesgiPiEFhk8MNvgwa.URFF/ArkRtIcEu2PtjiN7Jw.C3flYCK', NULL, NULL, '$2a$12$C1.hsml0tP.TxOpGukTlG.OiyrSllpMV0qHzsEsislumDP0n5F4Yq', TRUE, '2025-03-04 04:53:01')[0m
+  [1m[36mTRANSACTION (4.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-35@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Ward Carter', 'example-35@railstutorial.org', '2025-03-04 04:53:01.849309', '2025-03-04 04:53:01.849309', '$2a$12$6X/2GBwxvOT/CbgoqcPSMu5qW3rLeXVuyPlC8u0Y82mtigs2imTMK', NULL, NULL, '$2a$12$aNwD42AL24DUQmCbhc6bWuZQ.GxTlC7Q//knqEoJmpRcfXoOLaGHC', TRUE, '2025-03-04 04:53:01')[0m
+  [1m[36mTRANSACTION (3.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-36@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Joel Dooley', 'example-36@railstutorial.org', '2025-03-04 04:53:02.181919', '2025-03-04 04:53:02.181919', '$2a$12$LXKB7QbFrHsWdeSjo4NuVOZhKwF/j.wlTg1dmUWFl2lN2n/X47Gw2', NULL, NULL, '$2a$12$bs7fnwhQigmiZXYjUG.oS..Zy/1GAJCh9izRUqq8yDP6xyBF0KyPS', TRUE, '2025-03-04 04:53:02')[0m
+  [1m[36mTRANSACTION (4.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-37@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Marla Legros', 'example-37@railstutorial.org', '2025-03-04 04:53:02.515760', '2025-03-04 04:53:02.515760', '$2a$12$x3xYmuBub.0oHRZWGEB5lO2f96qsVnvmq9TP2ACkesO7sYU84zmi2', NULL, NULL, '$2a$12$Y0AiWutVujGy72i30JsDG.dg0NrmW4xGT9iIEU3xaEE83/0HI084W', TRUE, '2025-03-04 04:53:02')[0m
+  [1m[36mTRANSACTION (3.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-38@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Pierre Langworth', 'example-38@railstutorial.org', '2025-03-04 04:53:02.857835', '2025-03-04 04:53:02.857835', '$2a$12$xvYL6yI8N5lPjjaPi6Wm6.Tka2ZgHi4kQ0rJEYGNioHiMfV8UQniO', NULL, NULL, '$2a$12$uLsRUGQAV.t9nkUrufyle.DDehhd9ex5EdToarAVEcgRKgo5lIq36', TRUE, '2025-03-04 04:53:02')[0m
+  [1m[36mTRANSACTION (4.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-39@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Dr. Frankie Bashirian', 'example-39@railstutorial.org', '2025-03-04 04:53:03.190559', '2025-03-04 04:53:03.190559', '$2a$12$bt9sTBoFaWEAIkAVNyseSe8GEBLroW0dVG2Y4vvKsQqAipXcl2Zy.', NULL, NULL, '$2a$12$r4UjVhTWJYGaD5kVs2LYk.6E.I9Nypjz9j0Z1baBKM/Ffy73gK1DO', TRUE, '2025-03-04 04:53:03')[0m
+  [1m[36mTRANSACTION (4.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-40@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('The Hon. Jerilyn Ullrich', 'example-40@railstutorial.org', '2025-03-04 04:53:03.520377', '2025-03-04 04:53:03.520377', '$2a$12$FLpOZebdCsXJIx6Z9eunLef8f0a/MXBMHTUAg3M/fwKA.3LQhdpE2', NULL, NULL, '$2a$12$HS5EaP3YeNWj6ks.6j7Iv.hPhzXy9Av6UYIMnpHfM43FG/j3qzFe2', TRUE, '2025-03-04 04:53:03')[0m
+  [1m[36mTRANSACTION (4.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-41@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Loriann Buckridge', 'example-41@railstutorial.org', '2025-03-04 04:53:03.843532', '2025-03-04 04:53:03.843532', '$2a$12$K98fBeY61o9F2uv.mHfHVe1HknwbTPKf8z3Hx4dCL6hWheKOgRBWm', NULL, NULL, '$2a$12$Q4TEcxLdGPZBGoO8gdJ/C.KBb84534eh5.haxfeDrZecGUG7RSv.i', TRUE, '2025-03-04 04:53:03')[0m
+  [1m[36mTRANSACTION (4.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-42@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Justin Bergstrom', 'example-42@railstutorial.org', '2025-03-04 04:53:04.181004', '2025-03-04 04:53:04.181004', '$2a$12$Ipjx4yKCMErjA6mbm/vq6ususArW8Wyil9BbbhJ0Plq/wRniD4yH2', NULL, NULL, '$2a$12$MNtdgE2RZUVGan/PYnpMgeLoUeVF2Ru4T3Ntv7fiKYBpNf17xZ5oi', TRUE, '2025-03-04 04:53:04')[0m
+  [1m[36mTRANSACTION (4.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-43@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Pura Bailey V', 'example-43@railstutorial.org', '2025-03-04 04:53:04.518337', '2025-03-04 04:53:04.518337', '$2a$12$k3hxHcQiarRQxiOaQKPh4.FtbcrmmNu3TnwHlXemqkMgSjuuYa5jS', NULL, NULL, '$2a$12$cxLZi/RniDlEZOeMaoSgyeK0FxgxWwJRCpB0y2JvNoAsLcZgTXbx.', TRUE, '2025-03-04 04:53:04')[0m
+  [1m[36mTRANSACTION (3.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-44@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Magdalen Dach', 'example-44@railstutorial.org', '2025-03-04 04:53:04.856936', '2025-03-04 04:53:04.856936', '$2a$12$NhxKcWJd9qh/1RR.R3Krb.sfYl/VzVIfWYwR.ZVpT4Dtfcx3u6QwO', NULL, NULL, '$2a$12$bNxnr8qyQvx4Iio7yFNCMuiPODjGnx6L3s6DHtuXuSagQQD84QpXa', TRUE, '2025-03-04 04:53:04')[0m
+  [1m[36mTRANSACTION (3.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-45@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Chase Goyette Ret.', 'example-45@railstutorial.org', '2025-03-04 04:53:05.183810', '2025-03-04 04:53:05.183810', '$2a$12$7Uzfz4kDeYBrXD3FZnTWJukcWb.ClxQPuGmmr4t6CxmaqLte9INQC', NULL, NULL, '$2a$12$BkHBAMyrpB1/Qt/MtwGZgeQhra0B/8s05v1vb3.j/KsirgLgxBhiG', TRUE, '2025-03-04 04:53:05')[0m
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-46@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Cherry Luettgen Ret.', 'example-46@railstutorial.org', '2025-03-04 04:53:05.513916', '2025-03-04 04:53:05.513916', '$2a$12$BTxV.t2zPms0zfzVoKt8wuNUOxcPNq6hSyAHBbcUlRdopx/TQxjiq', NULL, NULL, '$2a$12$/8RZR/0oQgYSAOxYfT6edOc3rEOytCmBrC9SC30gKn5.s17BJ6Z9m', TRUE, '2025-03-04 04:53:05')[0m
+  [1m[36mTRANSACTION (5.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-47@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Olga Abshire', 'example-47@railstutorial.org', '2025-03-04 04:53:05.843776', '2025-03-04 04:53:05.843776', '$2a$12$9nYpyQ8HB.jykEaBzdVqmeD9xfKonUufTBiqhFPUAlscUB9fz2Fx.', NULL, NULL, '$2a$12$iqD8odlE6.7lXfOMZdulB.TbHWT0WFu1vyYAhQK6jd9SykZs35STq', TRUE, '2025-03-04 04:53:05')[0m
+  [1m[36mTRANSACTION (3.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-48@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Fannie McCullough', 'example-48@railstutorial.org', '2025-03-04 04:53:06.176404', '2025-03-04 04:53:06.176404', '$2a$12$fX4EXdhX9lw1q8sWN5eqcudR.ibpRvy1u7JDqfeRiCLLLqR9GuoYC', NULL, NULL, '$2a$12$gLRCDIZ4aTMhakj8vmSDXeIB7B96306qgioDFzF3I7tT2s0UKRZwa', TRUE, '2025-03-04 04:53:06')[0m
+  [1m[36mTRANSACTION (5.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-49@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Mikel Kozey', 'example-49@railstutorial.org', '2025-03-04 04:53:06.501063', '2025-03-04 04:53:06.501063', '$2a$12$Li8Ls51DsGZmUWOVrgVq7u8JxBPSpMcHWlLzInAe2zcs51Lwx/HnS', NULL, NULL, '$2a$12$U1HUPaia6pv8G6t56xLzD.4he0Eg3gvRd3CNQMqkSpgSqhwZ.8aoO', TRUE, '2025-03-04 04:53:06')[0m
+  [1m[36mTRANSACTION (5.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-50@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Terry Labadie', 'example-50@railstutorial.org', '2025-03-04 04:53:06.823139', '2025-03-04 04:53:06.823139', '$2a$12$IHIqs7NJynDcZmW8DcbVROT7EVo/yH1Mcu7fJI/1bkXmkni8lgwby', NULL, NULL, '$2a$12$PGQXK4sXZbIeSbilqUhLHePyC3A7OfrEg8EFo/LO73h2D2BlLeyqu', TRUE, '2025-03-04 04:53:06')[0m
+  [1m[36mTRANSACTION (4.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-51@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Delta Crist PhD', 'example-51@railstutorial.org', '2025-03-04 04:53:07.146984', '2025-03-04 04:53:07.146984', '$2a$12$YMoyf7J/svLnP1zrO9m1uOvaEu108WnPdztIITtKrT3LyAG6SvwCu', NULL, NULL, '$2a$12$PgqfiFE/bN7Y0FBZixGO1.io78ziiaU3Gwf4y4H6NF9tKB7UvWQ.e', TRUE, '2025-03-04 04:53:06')[0m
+  [1m[36mTRANSACTION (5.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-52@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Dante McGlynn', 'example-52@railstutorial.org', '2025-03-04 04:53:07.472359', '2025-03-04 04:53:07.472359', '$2a$12$4fDsGBcQ/relMm7KKyhPeuuBbacxXILliFNxqml205NHLcQ6vcFty', NULL, NULL, '$2a$12$n69h2ISgOcUlxCaB5xjqc.fjNwsSHywqcQKAotxxGeqqq/568TRLS', TRUE, '2025-03-04 04:53:07')[0m
+  [1m[36mTRANSACTION (3.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-53@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Kimbery Gorczany', 'example-53@railstutorial.org', '2025-03-04 04:53:07.805390', '2025-03-04 04:53:07.805390', '$2a$12$TBe4w/G3DVzsI4rdlzUwZu1ZC4Cg.E79R2T6Y3DnZPuY8FtW.zp32', NULL, NULL, '$2a$12$QPw4cARQubOkzgnAVqxY7eDefGrVBqsINfRkKg82a24N1EUVuwtOW', TRUE, '2025-03-04 04:53:07')[0m
+  [1m[36mTRANSACTION (3.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-54@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Eduardo Grady', 'example-54@railstutorial.org', '2025-03-04 04:53:08.143395', '2025-03-04 04:53:08.143395', '$2a$12$hkt1ZGKtF5qpAqXrOYnk4.3wbUMplRprDxhzA/gzC.qSq76cYCtTq', NULL, NULL, '$2a$12$mxo3HGlHdAiGsFvrrew/vuzIzjPLIWAfbllGSaF8lZrV2/VqjQkGS', TRUE, '2025-03-04 04:53:07')[0m
+  [1m[36mTRANSACTION (3.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-55@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Cliff Kovacek V', 'example-55@railstutorial.org', '2025-03-04 04:53:08.472052', '2025-03-04 04:53:08.472052', '$2a$12$ZZqjp0SyNUL9owffn3VbouR806EIcSlHSDLBx/EFKUj8hlEZCCGmq', NULL, NULL, '$2a$12$aMItj/QxGeKsTF5qY26BzONNhDOoxRJl8NUB30vq55di95HoIwLb2', TRUE, '2025-03-04 04:53:08')[0m
+  [1m[36mTRANSACTION (3.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-56@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Robert Nicolas', 'example-56@railstutorial.org', '2025-03-04 04:53:08.802917', '2025-03-04 04:53:08.802917', '$2a$12$3b/WjAJJhtyYhXOHsR5YwutCnYZo8zVlzJasSIgozZ8TVauBOeIuS', NULL, NULL, '$2a$12$kEUt5AAYhBDTNO8TIJVRo.cJDehLgf4Lmb.joP5rpXaPHmf3/KeKa', TRUE, '2025-03-04 04:53:08')[0m
+  [1m[36mTRANSACTION (4.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-57@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Henry Legros LLD', 'example-57@railstutorial.org', '2025-03-04 04:53:09.135155', '2025-03-04 04:53:09.135155', '$2a$12$6zwTTA6t4yZDyBlraMb5se6hpouB3N699Z8rMo.UARuUeVSoX5Gka', NULL, NULL, '$2a$12$NfpogJ9RFsHJI//QNAWklukMuBEcYwWlMzZrW.6Pm7ejl/WrlswnG', TRUE, '2025-03-04 04:53:08')[0m
+  [1m[36mTRANSACTION (4.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-58@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Carl Crist', 'example-58@railstutorial.org', '2025-03-04 04:53:09.471342', '2025-03-04 04:53:09.471342', '$2a$12$f5ZCYNqXQCxJ0soRTLCFB.NvKvHWdoGcFhVSR2TjRP9D2fIesO/a6', NULL, NULL, '$2a$12$AuGjJwnDC4yW4J5LpdnY9OaZadrYlUG4CDpXYoU.WzNo5AyLJSSxu', TRUE, '2025-03-04 04:53:09')[0m
+  [1m[36mTRANSACTION (3.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-59@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Mindy Yundt PhD', 'example-59@railstutorial.org', '2025-03-04 04:53:09.814747', '2025-03-04 04:53:09.814747', '$2a$12$cjLqs04oqRK867eq7xfEZeUBungK7E9hpG6kDUInu7sCOLIezk66q', NULL, NULL, '$2a$12$IsdjT03qgrQ8YaeQNLsl0OATVNTC8Bmg7GMXEbN7Ggz4e2KzFwZAC', TRUE, '2025-03-04 04:53:09')[0m
+  [1m[36mTRANSACTION (3.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-60@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Msgr. Felipa Bauch', 'example-60@railstutorial.org', '2025-03-04 04:53:10.150472', '2025-03-04 04:53:10.150472', '$2a$12$fkGYAw02VlVywifrYWYK4ue6Wt.QXBBivleMrFCvh2uuDoOzaMz9y', NULL, NULL, '$2a$12$8GmQ3iDphx6mnbdaex.jAu26slYx4uQsii1ilqPSEmvnhPJz3QMY2', TRUE, '2025-03-04 04:53:09')[0m
+  [1m[36mTRANSACTION (4.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-61@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Hollie Swaniawski', 'example-61@railstutorial.org', '2025-03-04 04:53:10.479777', '2025-03-04 04:53:10.479777', '$2a$12$VWbB8e1N92ywKU36KXgBiunIEWuGe9olmbGyv2ItliuosMUZhgWNq', NULL, NULL, '$2a$12$UriaQvv4PeezQF5o7KRdsuK4Uk90LwVec2u5YJ7J7pdVoUIkQOsMO', TRUE, '2025-03-04 04:53:10')[0m
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-62@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Rubin Casper', 'example-62@railstutorial.org', '2025-03-04 04:53:10.822287', '2025-03-04 04:53:10.822287', '$2a$12$d8AxbFxHmfsK11NHY4WapOWOemfH9XyDpfHif1a1ikj0ayQ93vmyS', NULL, NULL, '$2a$12$G6BFDldoMB9sh3k9BzGz/u9qH26Ezdb8qFJ2xXQ0f5xl.Jrcp6RA2', TRUE, '2025-03-04 04:53:10')[0m
+  [1m[36mTRANSACTION (4.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-63@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Olin Cormier', 'example-63@railstutorial.org', '2025-03-04 04:53:11.172006', '2025-03-04 04:53:11.172006', '$2a$12$pk5OER1LN9k5aYVmGWZYN.He2P0LjHyelzZa8vVZQa.wMm1bcc4g2', NULL, NULL, '$2a$12$fw.9pIRGBe4m2hdyI2.bCOHKFcbL/DLYR5qCUiiLfbmsZj/P7wNbm', TRUE, '2025-03-04 04:53:11')[0m
+  [1m[36mTRANSACTION (3.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-64@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Pres. Jayson Torp', 'example-64@railstutorial.org', '2025-03-04 04:53:11.514744', '2025-03-04 04:53:11.514744', '$2a$12$rE6Pf64POdGJud8kyE1T2eqh1MtKcscgy.yEg2XnII7xxNy50hPOC', NULL, NULL, '$2a$12$QMT8BHc8LPX03/yu1hsf3Oqjxkx6rzkg2iqgq4ySZxrtrbg6OMgdO', TRUE, '2025-03-04 04:53:11')[0m
+  [1m[36mTRANSACTION (3.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-65@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Terry Hilll Ret.', 'example-65@railstutorial.org', '2025-03-04 04:53:11.841103', '2025-03-04 04:53:11.841103', '$2a$12$zbDmKM2a8DcgliOWD2X/8eWDba.g7mx6QCGoZpyBRane7xrx05wBC', NULL, NULL, '$2a$12$3r393gJHu6VXZMSO1FOnQurEOAaFdV7RWhhmVon8YKZz2SGIt80b6', TRUE, '2025-03-04 04:53:11')[0m
+  [1m[36mTRANSACTION (4.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-66@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('John Hackett', 'example-66@railstutorial.org', '2025-03-04 04:53:12.178847', '2025-03-04 04:53:12.178847', '$2a$12$o5RsPc.NtZVtvX.9/EoAqe0OJpoqxIJK.BtZh0VXs3Z6UHKlOY5PW', NULL, NULL, '$2a$12$di/BYEqxEr5rJ0MUquTMTurfFn52.ewlZqXJ9m/oxw1jHg7LaUQ8u', TRUE, '2025-03-04 04:53:12')[0m
+  [1m[36mTRANSACTION (3.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-67@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Willy Barton', 'example-67@railstutorial.org', '2025-03-04 04:53:12.505236', '2025-03-04 04:53:12.505236', '$2a$12$ABvH2ryBBUjLRJqwQN57j.tKllsn5/j1VQU5DNBVLc6DRJbZ7v9Si', NULL, NULL, '$2a$12$gL0Z3OpfPHtrB1OjJyx1..cXZyTa5fAHQBNlduorYqgk4hayCKm1e', TRUE, '2025-03-04 04:53:12')[0m
+  [1m[36mTRANSACTION (4.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-68@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Ronald Mitchell LLD', 'example-68@railstutorial.org', '2025-03-04 04:53:12.836322', '2025-03-04 04:53:12.836322', '$2a$12$pCwSzz0ug.U1tGRb6E5a/OFxWK.q/RTluqI9KRxkR7o31Bp.3FKuG', NULL, NULL, '$2a$12$dGoLX3MjFKmTeyortOwbd.CjqGybIoJogMtnXMg3YwFR7qQTx0PhC', TRUE, '2025-03-04 04:53:12')[0m
+  [1m[36mTRANSACTION (4.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-69@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Cindy Ondricka', 'example-69@railstutorial.org', '2025-03-04 04:53:13.163556', '2025-03-04 04:53:13.163556', '$2a$12$aHXtgO0/NF9T/MSA.u9IAeeJaq7G.cIYomBfQrO9sJvceaMUs.aES', NULL, NULL, '$2a$12$wan9j/WIZi9WnUy0XZvcXudOugde0mH1A1vZ6fzsRMXUBAAW3qnA2', TRUE, '2025-03-04 04:53:13')[0m
+  [1m[36mTRANSACTION (3.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-70@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (3.4ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Bill Yost', 'example-70@railstutorial.org', '2025-03-04 04:53:13.490609', '2025-03-04 04:53:13.490609', '$2a$12$2TMOqN.BDvGKOxTAji6wc.q1Jt990b/PEiQc1uD8V0yurqCI1hDqm', NULL, NULL, '$2a$12$mzF.JGCUF2SU9B0/0aYfE.uFE52IaamuFYfkc997vGU0lqAiWyj0y', TRUE, '2025-03-04 04:53:13')[0m
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-71@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Theola Skiles', 'example-71@railstutorial.org', '2025-03-04 04:53:13.833393', '2025-03-04 04:53:13.833393', '$2a$12$v6m8RCGkcFADYNj9Z/xgceZVEf4Rh/ZkDi/KL8eOSwXK1L5IfA4Hy', NULL, NULL, '$2a$12$YtCSSisV2W8gbm31TLWVJOh3.R6ersXf7sV./M1TfHgQnST9uI7TC', TRUE, '2025-03-04 04:53:13')[0m
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-72@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Miquel Schaefer Jr.', 'example-72@railstutorial.org', '2025-03-04 04:53:14.175932', '2025-03-04 04:53:14.175932', '$2a$12$MvNG/61kGYhxRza9zA0cOeZodRHw3.myZxKE7x3jJ.MGEwlsFbw.S', NULL, NULL, '$2a$12$Mx6X7.bUr5YR0Lj.5pIHf.wECrL3AeNkF3.wdZNnpeutIHAfWOs4K', TRUE, '2025-03-04 04:53:14')[0m
+  [1m[36mTRANSACTION (4.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-73@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Jc Boehm', 'example-73@railstutorial.org', '2025-03-04 04:53:14.514963', '2025-03-04 04:53:14.514963', '$2a$12$ZwhroSbgLyEHEMIPAkFlWuLcNXiGXW73oNhGzuhnrvFv1WavAY/Im', NULL, NULL, '$2a$12$bSt666OMfnSLjbfwMHer7uqYYnqvKOSPKPqBwwBF/xaSF5qBEMUK.', TRUE, '2025-03-04 04:53:14')[0m
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-74@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Mrs. Lance Waters', 'example-74@railstutorial.org', '2025-03-04 04:53:14.850335', '2025-03-04 04:53:14.850335', '$2a$12$EkR16.H3oZyNj3rJSRcWjujjIfkWeSDh.gufNZqO9spPywx758DVO', NULL, NULL, '$2a$12$LqG1xeKtfdHnn1dVd5nJG.9dP2IdsDcn/wF2GcGnJrfwOCAFXHXTW', TRUE, '2025-03-04 04:53:14')[0m
+  [1m[36mTRANSACTION (3.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-75@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Gilberte Rath', 'example-75@railstutorial.org', '2025-03-04 04:53:15.171241', '2025-03-04 04:53:15.171241', '$2a$12$OlTvFHjGabjE8rLBpwnpLeglJ1diB7/kpNbyWKM29xu/fbk4A2AUK', NULL, NULL, '$2a$12$yN71tGwUyr2RCkG3lcS3TutKT2jzIAAnstT00h4.n.iEIBLjHRZze', TRUE, '2025-03-04 04:53:15')[0m
+  [1m[36mTRANSACTION (5.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-76@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Pedro Durgan Jr.', 'example-76@railstutorial.org', '2025-03-04 04:53:15.495846', '2025-03-04 04:53:15.495846', '$2a$12$Ouvbp5ZzZpixhDANiR31Vui.iU4RgzRKpwjqYcN7PKe7lLY/cvhRi', NULL, NULL, '$2a$12$CrQP05wNQhQjTrB6IhRTNedguYYQeVO40q03ARxyDkVK3qpH86H4a', TRUE, '2025-03-04 04:53:15')[0m
+  [1m[36mTRANSACTION (4.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-77@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Georgie Cummings', 'example-77@railstutorial.org', '2025-03-04 04:53:15.835333', '2025-03-04 04:53:15.835333', '$2a$12$L69oz0M06KIiO8zQso6F9.D45c7IJHQAQklfJA.J723qgg3A1fk5y', NULL, NULL, '$2a$12$251SXSBDtuLGnaeTVPFrzOVYA/klFPf446ebQGNAySeUg0hC6rxXq', TRUE, '2025-03-04 04:53:15')[0m
+  [1m[36mTRANSACTION (4.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-78@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Maye Dach', 'example-78@railstutorial.org', '2025-03-04 04:53:16.170508', '2025-03-04 04:53:16.170508', '$2a$12$OqCx3pJOY8bk2i1vuYkYJe9VCq.d9jQgD3db7uPzmgODgv06X7fra', NULL, NULL, '$2a$12$KHLg7ReCyVeeJGv84.VMhOZW7kfBZKU/HF6PTN.aqiS8a8XQAKdEi', TRUE, '2025-03-04 04:53:16')[0m
+  [1m[36mTRANSACTION (3.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-79@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Caroline Klein', 'example-79@railstutorial.org', '2025-03-04 04:53:16.508605', '2025-03-04 04:53:16.508605', '$2a$12$mi7FN9vUp7wBtOc/mOkykeVzTCZbdGwP1locUfh8SOoE8ynenILXC', NULL, NULL, '$2a$12$AT56Cglg6d5cSv1nBwotCOhBJRbNhfQz6yXia8kVsfNYeR3d.zE2.', TRUE, '2025-03-04 04:53:16')[0m
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-80@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Eldon Reinger', 'example-80@railstutorial.org', '2025-03-04 04:53:16.841826', '2025-03-04 04:53:16.841826', '$2a$12$pTLuVF0FYVaK27PfzIouNObrqzxo4ooUbgCQj8gKC9LTshiEHuy4K', NULL, NULL, '$2a$12$fl.xtEOKYPGQpXVSHVTSBesQvPerO8MCPHjmRF9Ho6Qd3NMShmIAq', TRUE, '2025-03-04 04:53:16')[0m
+  [1m[36mTRANSACTION (3.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-81@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Hal Schmitt', 'example-81@railstutorial.org', '2025-03-04 04:53:17.171366', '2025-03-04 04:53:17.171366', '$2a$12$fu8sHnohWOWAOwEGxndg0uoKSYPch68ztlS/lP6qEJC2qUzHBbbTq', NULL, NULL, '$2a$12$whoO.eybrkVdEcnXTY//N.XROlt2fGqYkl8rVkHjHGDJlA3Nmr11.', TRUE, '2025-03-04 04:53:17')[0m
+  [1m[36mTRANSACTION (4.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-82@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Keiko Lueilwitz DDS', 'example-82@railstutorial.org', '2025-03-04 04:53:17.503359', '2025-03-04 04:53:17.503359', '$2a$12$ONvcz6xlraSw..DITzlcQOSj9xq1Q6Cw.yqj/9Jda7SU9cWnd4AgO', NULL, NULL, '$2a$12$RTbGQW7UNFtFLQSgliXkjO7WFj93Hw4ZBrzaHlaKTAyixFtQdxdre', TRUE, '2025-03-04 04:53:17')[0m
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-83@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Lyman Dicki Esq.', 'example-83@railstutorial.org', '2025-03-04 04:53:17.839104', '2025-03-04 04:53:17.839104', '$2a$12$d8XOTJeNTvLVunIIcLFNXuMJmxyYL1noZ4R2rjyvpBN7H.UXhUMqW', NULL, NULL, '$2a$12$MFSdZjw1TiEUL7dYXWZdtOgQX7JsY2liFxg3HijG0u6MJseE4Kmpq', TRUE, '2025-03-04 04:53:17')[0m
+  [1m[36mTRANSACTION (3.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-84@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Fransisca Corwin', 'example-84@railstutorial.org', '2025-03-04 04:53:18.171841', '2025-03-04 04:53:18.171841', '$2a$12$34I87oWZy1/B4x5eBfJTaup3COHICAASgz1NL.gSbvJbHL8AAdXrG', NULL, NULL, '$2a$12$yyADs.hQN9qiPshcjlo/U.JkZoVmQ6gvxgCrNiKrb0I0L1oD3mswm', TRUE, '2025-03-04 04:53:18')[0m
+  [1m[36mTRANSACTION (3.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-85@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Ms. Keenan Durgan', 'example-85@railstutorial.org', '2025-03-04 04:53:18.503254', '2025-03-04 04:53:18.503254', '$2a$12$Kw/1WmbURgCzL4ASFq54EePP5IOX13/Be4KGJANyrIz/mJSmQJrdC', NULL, NULL, '$2a$12$bj2sLcsqlewrHY14E8445O.KwEqqn/KJb3P/W4QbFYPfC6spP.eGu', TRUE, '2025-03-04 04:53:18')[0m
+  [1m[36mTRANSACTION (4.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-86@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Tyra Schmidt', 'example-86@railstutorial.org', '2025-03-04 04:53:18.832982', '2025-03-04 04:53:18.832982', '$2a$12$Zvz5hRVpnrET.rZWrvimN.cD1kWIDiEQLKLGEJ02Uno6CzFE74lP.', NULL, NULL, '$2a$12$f31MPDMRyKWcQHMiypWuW.Q1Pxm7ZPrtbFsElVIZTAimR3egndBKG', TRUE, '2025-03-04 04:53:18')[0m
+  [1m[36mTRANSACTION (4.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-87@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Barbar Berge', 'example-87@railstutorial.org', '2025-03-04 04:53:19.163033', '2025-03-04 04:53:19.163033', '$2a$12$jXfC9IEAnCk2NLgcsZgu1uUKuN0DHOh32KuMJ1TZ8yqpu3iXgGyo6', NULL, NULL, '$2a$12$k1dMB.FLiGJ81lwzYW.w3upOU7EwFXoEvIUCjX1FDWBE/xSmmcyl.', TRUE, '2025-03-04 04:53:18')[0m
+  [1m[36mTRANSACTION (4.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-88@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Prof. Yuonne Kuvalis', 'example-88@railstutorial.org', '2025-03-04 04:53:19.497966', '2025-03-04 04:53:19.497966', '$2a$12$5zHZWnEA5L7hn8xvpopmnOCuOAl4hW6WW9HJ60LUhE3YuOhwsbDim', NULL, NULL, '$2a$12$Lbp4X2Rc/DpWgOKdK/eeMOU7i6HLGE3FNM.OFf2DbaZr/FCIvGmk.', TRUE, '2025-03-04 04:53:19')[0m
+  [1m[36mTRANSACTION (4.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-89@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Latisha Connelly', 'example-89@railstutorial.org', '2025-03-04 04:53:19.832354', '2025-03-04 04:53:19.832354', '$2a$12$VTfqFR13meRs8JaQhUrvN.FN6TRKdHN224s0R/bTEjqZyRhmUKZ72', NULL, NULL, '$2a$12$JN5LAAAoo0JfW1nj88D3DuVpSe/H3ODykDKAqqB37h7.L4Hb60gkG', TRUE, '2025-03-04 04:53:19')[0m
+  [1m[36mTRANSACTION (4.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-90@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Brett Sporer', 'example-90@railstutorial.org', '2025-03-04 04:53:20.160654', '2025-03-04 04:53:20.160654', '$2a$12$f0fS2f6ogxgOYGAOyAVeEeRqCECJO5a1VZwbNl4R8OCC8FHmdnZ5W', NULL, NULL, '$2a$12$GX0VwuzifzFedwwEYvgeKelkrP7ZEL6wuNNTkTdjOgFjzfGWBdKQa', TRUE, '2025-03-04 04:53:20')[0m
+  [1m[36mTRANSACTION (3.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-91@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Mr. Loralee Conroy', 'example-91@railstutorial.org', '2025-03-04 04:53:20.481485', '2025-03-04 04:53:20.481485', '$2a$12$CpLzpCTWf22d9nvSxa313umk4a0acVhl9s59yOO/KuvvaadhN8.ba', NULL, NULL, '$2a$12$xbMLrd.vdmwcCBY.qxRxvuWuxOgIs0tBmJ5ECB5Uzn1Y7uBeB36Uy', TRUE, '2025-03-04 04:53:20')[0m
+  [1m[36mTRANSACTION (4.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-92@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Jaimie O\'Reilly DC', 'example-92@railstutorial.org', '2025-03-04 04:53:20.804949', '2025-03-04 04:53:20.804949', '$2a$12$I4MDqagBAaNPQt7Uj.yoauj.nTKB/trcNSEsirBaeE.V9GCX9P2BW', NULL, NULL, '$2a$12$YimTJs79Z/v8aCs.JxoUuuTc1AOQppFH3FfF9bax.jmtnYBRHeHoG', TRUE, '2025-03-04 04:53:20')[0m
+  [1m[36mTRANSACTION (4.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-93@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Milagros Osinski', 'example-93@railstutorial.org', '2025-03-04 04:53:21.139706', '2025-03-04 04:53:21.139706', '$2a$12$gyr8SrGmUJn3dw0502Yk.eWCfXiEmPFPFU43GOGkRoL/vbaBKxfXS', NULL, NULL, '$2a$12$vX.9bARxcGKqdXAcPxd7xe2lxh9gq2BkPwqOWpajee19owx4nJeHm', TRUE, '2025-03-04 04:53:20')[0m
+  [1m[36mTRANSACTION (4.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-94@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Harry Mertz', 'example-94@railstutorial.org', '2025-03-04 04:53:21.469859', '2025-03-04 04:53:21.469859', '$2a$12$RwcHLiLheKXnxBSnfsqgtusk0SrppfX2mzP0Q6LGGYZQcHfMvJgRO', NULL, NULL, '$2a$12$h7PxqLycVXf8oWcHpeCVSOPFZRfAUdyGjEhVDziTogWOCE4a.tSCe', TRUE, '2025-03-04 04:53:21')[0m
+  [1m[36mTRANSACTION (4.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-95@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Malcom Schmidt', 'example-95@railstutorial.org', '2025-03-04 04:53:21.805408', '2025-03-04 04:53:21.805408', '$2a$12$qLOKnOXk8LIZN0XlXMQh/uNdhccpDhECZi4AE5ZWUgbxlRL5YKRnm', NULL, NULL, '$2a$12$xwVqiE124S8oGOo3IJ4h/uU76UKAuAmxSjpjXF740x7yQFLyCJdru', TRUE, '2025-03-04 04:53:21')[0m
+  [1m[36mTRANSACTION (3.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-96@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Cyrus Weimann', 'example-96@railstutorial.org', '2025-03-04 04:53:22.140008', '2025-03-04 04:53:22.140008', '$2a$12$hep0nv8DucJ5krxaYu2WNOhdzO1JsAokbGSD95WrqKexV4PyQToTS', NULL, NULL, '$2a$12$ASqq/9MWQUKA1Rl/K1w5f.hf0Nzi43q/1HIJgWAOVBMZs0BJ1q8Li', TRUE, '2025-03-04 04:53:21')[0m
+  [1m[36mTRANSACTION (3.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-97@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Gerardo Kris', 'example-97@railstutorial.org', '2025-03-04 04:53:22.464113', '2025-03-04 04:53:22.464113', '$2a$12$DFRpvE/aIBxS.ZFhf3iPz.PnTWDDxpqiHFec3uW8fMMSpGRWGY7DC', NULL, NULL, '$2a$12$xoPxT32dt5IGSITT.na5wOVbt79/vh20.SJsv/JLIQ/YT3mMFON5C', TRUE, '2025-03-04 04:53:22')[0m
+  [1m[36mTRANSACTION (4.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-98@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Solomon Halvorson', 'example-98@railstutorial.org', '2025-03-04 04:53:22.786134', '2025-03-04 04:53:22.786134', '$2a$12$xN/o2oAQ4zcxYUYpguDMDumAhwwlNNtiyzZLu0ySLQEt2PykOa6xq', NULL, NULL, '$2a$12$yyQ.VlT3UL80gJe0UywZkOWWInARIDdUaiq67/ILnFdZp4xmJBuYW', TRUE, '2025-03-04 04:53:22')[0m
+  [1m[36mTRANSACTION (4.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example-99@railstutorial.org' LIMIT 1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('Roderick D\'Amore', 'example-99@railstutorial.org', '2025-03-04 04:53:23.114704', '2025-03-04 04:53:23.114704', '$2a$12$dTvb61uLDnD6WS5.hnLtUe7b/fXvePzM7z7.l9Us2DIZ51xgACLlG', NULL, NULL, '$2a$12$50P2x7meJHsdw247OPlzCe3ttJkqCxBaGqeFVsp8zKd9dlS4LVjke', TRUE, '2025-03-04 04:53:22')[0m
+  [1m[36mTRANSACTION (3.8ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/users/101" for 127.0.0.1 at 2025-03-04 06:04:57 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"101"}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:11:in `show'
+Completed 404 Not Found in 47ms (ActiveRecord: 2.1ms | Allocations: 2830)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=101):
+  
+app/controllers/users_controller.rb:11:in `show'
+Started POST "/__web_console/repl_sessions/507534e72b0a3e0639a3074de9b59ed6/trace" for 127.0.0.1 at 2025-03-04 06:05:18 +0000
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT GET_LOCK('7879438643346964470', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT RELEASE_LOCK('7879438643346964470')[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/" for 127.0.0.1 at 2025-03-04 06:06:37 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 5.6ms | Allocations: 731)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 3.0ms | Allocations: 101)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 26.4ms | Allocations: 5334)
+  Rendered layouts/_footer.html.erb (Duration: 3.2ms | Allocations: 212)
+  Rendered layout layouts/application.html.erb (Duration: 77.1ms | Allocations: 10096)
+Completed 200 OK in 989ms (Views: 88.0ms | ActiveRecord: 2.1ms | Allocations: 295497)
+
+
+Started GET "/login" for 127.0.0.1 at 2025-03-04 06:06:39 +0000
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 17.0ms | Allocations: 1897)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 11)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 1.8ms | Allocations: 729)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 44.7ms | Allocations: 5194)
+Completed 200 OK in 56ms (Views: 47.3ms | ActiveRecord: 0.3ms | Allocations: 5834)
+
+
+Started POST "/login" for 127.0.0.1 at 2025-03-04 06:06:43 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"hihi@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'hihi@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.7ms | Allocations: 569)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 9)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 1.8ms | Allocations: 704)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 26.9ms | Allocations: 3762)
+Completed 200 OK in 35ms (Views: 27.3ms | ActiveRecord: 0.9ms | Allocations: 4937)
+
+
+Started POST "/login" for 127.0.0.1 at 2025-03-04 06:07:15 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"hihi@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'hihi@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 4.3ms | Allocations: 903)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 3.1ms | Allocations: 94)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 5.5ms | Allocations: 1038)
+  Rendered layouts/_footer.html.erb (Duration: 3.8ms | Allocations: 207)
+  Rendered layout layouts/application.html.erb (Duration: 47.8ms | Allocations: 5269)
+Completed 200 OK in 62ms (Views: 54.6ms | ActiveRecord: 1.1ms | Allocations: 6996)
+
+
+Started GET "/signup" for 127.0.0.1 at 2025-03-04 06:07:23 +0000
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 3.3ms | Allocations: 225)
+  Rendered users/new.html.erb within layouts/application (Duration: 12.4ms | Allocations: 2366)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 9)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.1ms | Allocations: 729)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 68)
+  Rendered layout layouts/application.html.erb (Duration: 41.3ms | Allocations: 5601)
+Completed 200 OK in 63ms (Views: 44.1ms | ActiveRecord: 2.4ms | Allocations: 12715)
+
+
+Started POST "/users" for 127.0.0.1 at 2025-03-04 06:07:31 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"hihi", "email"=>"hihi@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'hihi@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Create (3.6ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('hihi', 'hihi@gmail.com', '2025-03-04 06:07:32.232395', '2025-03-04 06:07:32.232395', '$2a$12$m4wP4.dwRNhCY1rPi/sBFubOyX1Qw06Gkyis7xVEGWE9UdnQiUycO', NULL, NULL, '$2a$12$5MUYVr0NBPW5bn37/j.E2u0BIFf8xRafcfbhqtO7pUL.Jads3npvG', FALSE, NULL)[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (9.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  Rendering layout layouts/mailer.html.erb
+  Rendering user_mailer/account_activation.html.erb within layouts/mailer
+  Rendered user_mailer/account_activation.html.erb within layouts/mailer (Duration: 6.7ms | Allocations: 1585)
+  Rendered layout layouts/mailer.html.erb (Duration: 7.2ms | Allocations: 1670)
+UserMailer#account_activation: processed outbound mail in 45.4ms
+Completed 500 Internal Server Error in 603ms (ActiveRecord: 13.9ms | Allocations: 23575)
+
+
+  
+ActionView::Template::Error (Missing host to link to! Please provide the :host parameter, set default_url_options[:host], or set :only_path to true):
+     6: Welcome to the Sample App! Click on the link below to activate your account:
+     7: </p>
+     8: 
+     9: <%= link_to "Activate", edit_account_activation_url(@user.activation_token,
+    10:                                                     email: @user.email) %>
+  
+app/views/user_mailer/account_activation.html.erb:9
+app/mailers/user_mailer.rb:5:in `account_activation'
+app/models/user.rb:58:in `send_activation_email'
+app/controllers/users_controller.rb:21:in `create'
+Started POST "/users" for 127.0.0.1 at 2025-03-04 06:10:16 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"hihi", "email"=>"hihi@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'hihi@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 0.6ms | Allocations: 456)
+  Rendered users/new.html.erb within layouts/application (Duration: 3.1ms | Allocations: 2201)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 9)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28:in `remember'
+  [1m[36mUser Update (2.0ms)[0m  [1m[33mUPDATE `users` SET `users`.`updated_at` = '2025-03-04 06:10:17.325874', `users`.`remember_digest` = '$2a$12$uUVmY/ZD.terYJ4D8owkGe40PwyyPD0h0X0sF6t9scKrJGl0YsrZe' WHERE `users`.`id` = 101[0m
+  ↳ app/models/user.rb:28:in `remember'
+  [1m[36mTRANSACTION (4.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28:in `remember'
+  Rendered layouts/_header.html.erb (Duration: 188.8ms | Allocations: 3848)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 68)
+  Rendered layout layouts/application.html.erb (Duration: 217.4ms | Allocations: 8545)
+Completed 200 OK in 432ms (Views: 212.3ms | ActiveRecord: 11.8ms | Allocations: 16334)
+
+
+Started POST "/users" for 127.0.0.1 at 2025-03-04 06:10:24 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"hihi", "email"=>"hihi@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'hihi@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 0.3ms | Allocations: 350)
+  Rendered users/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1993)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 8)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 1.8ms | Allocations: 723)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 29.3ms | Allocations: 5132)
+Completed 200 OK in 218ms (Views: 29.5ms | ActiveRecord: 1.4ms | Allocations: 8257)
+
+
+Started GET "/" for 127.0.0.1 at 2025-03-04 06:10:28 +0000
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 3.1ms | Allocations: 364)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 11)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.1ms | Allocations: 741)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 27.5ms | Allocations: 3801)
+Completed 200 OK in 37ms (Views: 30.1ms | ActiveRecord: 0.4ms | Allocations: 4438)
+
+
+Started GET "/login" for 127.0.0.1 at 2025-03-04 06:10:29 +0000
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 834)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 11)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 3.5ms | Allocations: 739)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 49.3ms | Allocations: 4139)
+Completed 200 OK in 63ms (Views: 51.6ms | ActiveRecord: 0.7ms | Allocations: 4647)
+
+
+Started POST "/login" for 127.0.0.1 at 2025-03-04 06:10:32 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"hihi@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'hihi@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 185ms (ActiveRecord: 0.5ms | Allocations: 1146)
+
+
+Started GET "/" for 127.0.0.1 at 2025-03-04 06:10:33 +0000
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.4ms | Allocations: 146)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 9)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 1.8ms | Allocations: 724)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 25.7ms | Allocations: 3563)
+Completed 200 OK in 31ms (Views: 26.0ms | ActiveRecord: 0.4ms | Allocations: 3812)
+
+
+Started GET "/login" for 127.0.0.1 at 2025-03-04 06:10:40 +0000
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 741)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 9)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 1.8ms | Allocations: 724)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 26.7ms | Allocations: 3952)
+Completed 200 OK in 32ms (Views: 27.1ms | ActiveRecord: 0.3ms | Allocations: 4200)
+
+
+Started GET "/signup" for 127.0.0.1 at 2025-03-04 06:10:59 +0000
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 14)
+  Rendered users/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1303)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 8)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.2ms | Allocations: 724)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 32.1ms | Allocations: 4516)
+Completed 200 OK in 39ms (Views: 32.4ms | ActiveRecord: 0.5ms | Allocations: 4794)
+
+
+Started POST "/users" for 127.0.0.1 at 2025-03-04 06:11:18 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"hihi", "email"=>"lihovi4107@apklamp.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'lihovi4107@apklamp.com' LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('hihi', 'lihovi4107@apklamp.com', '2025-03-04 06:11:18.727314', '2025-03-04 06:11:18.727314', '$2a$12$z7lL/2atPn4DeGHfOsYJAurAQWIQjuOWfX/9wQaaFvi0HaPQpICcy', NULL, NULL, '$2a$12$3lxFVhxvu.OOk1MtZNDVy.zAKHKMcRIyUGgXD9X0dNYy9OzjsQUHS', FALSE, NULL)[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (4.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  Rendering layout layouts/mailer.html.erb
+  Rendering user_mailer/account_activation.html.erb within layouts/mailer
+  Rendered user_mailer/account_activation.html.erb within layouts/mailer (Duration: 0.4ms | Allocations: 1082)
+  Rendered layout layouts/mailer.html.erb (Duration: 0.8ms | Allocations: 1166)
+UserMailer#account_activation: processed outbound mail in 2.5ms
+Completed 500 Internal Server Error in 432ms (ActiveRecord: 6.1ms | Allocations: 10876)
+
+
+  
+ActionView::Template::Error (Missing host to link to! Please provide the :host parameter, set default_url_options[:host], or set :only_path to true):
+     6: Welcome to the Sample App! Click on the link below to activate your account:
+     7: </p>
+     8: 
+     9: <%= link_to "Activate", edit_account_activation_url(@user.activation_token,
+    10:                                                     email: @user.email) %>
+  
+app/views/user_mailer/account_activation.html.erb:9
+app/mailers/user_mailer.rb:5:in `account_activation'
+app/models/user.rb:58:in `send_activation_email'
+app/controllers/users_controller.rb:21:in `create'
+Started GET "/signup" for 127.0.0.1 at 2025-03-04 06:13:49 +0000
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 14)
+  Rendered users/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1325)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 8)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.1ms | Allocations: 724)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 28.2ms | Allocations: 4541)
+Completed 200 OK in 34ms (Views: 28.6ms | ActiveRecord: 0.5ms | Allocations: 4810)
+
+
+Started POST "/users" for 127.0.0.1 at 2025-03-04 06:13:55 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"hihi", "email"=>"lihovi4107@apklamp.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'lihovi4107@apklamp.com' LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 0.3ms | Allocations: 350)
+  Rendered users/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1993)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 8)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 1.9ms | Allocations: 723)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 28.5ms | Allocations: 5132)
+Completed 200 OK in 219ms (Views: 28.8ms | ActiveRecord: 1.7ms | Allocations: 8265)
+
+
+Started POST "/users" for 127.0.0.1 at 2025-03-04 06:14:27 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"user", "email"=>"tisefec292@lassora.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'tisefec292@lassora.com' LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Create (1.2ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`) VALUES ('user', 'tisefec292@lassora.com', '2025-03-04 06:14:27.867547', '2025-03-04 06:14:27.867547', '$2a$12$Upz8idCyOoKKHizzung7yei5b5EKKqVGYR/x14HJ3XksvjsQ92V5e', NULL, NULL, '$2a$12$g/1ZnUENky.EFD3DLLafb.gZ4IBf1QpJ9wWIW9csCnHYw5rKnNlBW', FALSE, NULL)[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (4.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  Rendering layout layouts/mailer.html.erb
+  Rendering user_mailer/account_activation.html.erb within layouts/mailer
+  Rendered user_mailer/account_activation.html.erb within layouts/mailer (Duration: 0.7ms | Allocations: 1063)
+  Rendered layout layouts/mailer.html.erb (Duration: 1.2ms | Allocations: 1146)
+UserMailer#account_activation: processed outbound mail in 2.9ms
+Completed 500 Internal Server Error in 380ms (ActiveRecord: 6.9ms | Allocations: 5968)
+
+
+  
+ActionView::Template::Error (Missing host to link to! Please provide the :host parameter, set default_url_options[:host], or set :only_path to true):
+     6: Welcome to the Sample App! Click on the link below to activate your account:
+     7: </p>
+     8: 
+     9: <%= link_to "Activate", edit_account_activation_url(@user.activation_token,
+    10:                                                     email: @user.email) %>
+  
+app/views/user_mailer/account_activation.html.erb:9
+app/mailers/user_mailer.rb:5:in `account_activation'
+app/models/user.rb:58:in `send_activation_email'
+app/controllers/users_controller.rb:21:in `create'
+Started POST "/users" for 127.0.0.1 at 2025-03-04 06:15:17 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"hihi", "email"=>"lihovi4107@apklamp.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'lihovi4107@apklamp.com' LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 1.8ms | Allocations: 359)
+  Rendered users/new.html.erb within layouts/application (Duration: 8.7ms | Allocations: 2095)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 9)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 5.8ms | Allocations: 1451)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 68)
+  Rendered layout layouts/application.html.erb (Duration: 52.8ms | Allocations: 6042)
+Completed 200 OK in 342ms (Views: 56.6ms | ActiveRecord: 28.3ms | Allocations: 13779)
+
+
+Started POST "/users" for 127.0.0.1 at 2025-03-04 06:15:24 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"hihi", "email"=>"lihovi4107@apklamp.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'lihovi4107@apklamp.com' LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 0.8ms | Allocations: 350)
+  Rendered users/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1993)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 8)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.5ms | Allocations: 723)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 32.6ms | Allocations: 5132)
+Completed 200 OK in 231ms (Views: 33.4ms | ActiveRecord: 1.9ms | Allocations: 8259)
+
+
+Started GET "/" for 127.0.0.1 at 2025-03-04 06:16:01 +0000
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 5.5ms | Allocations: 367)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 3.2ms | Allocations: 94)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 7.0ms | Allocations: 1061)
+  Rendered layouts/_footer.html.erb (Duration: 4.8ms | Allocations: 207)
+  Rendered layout layouts/application.html.erb (Duration: 73.4ms | Allocations: 4842)
+Completed 200 OK in 90ms (Views: 80.0ms | ActiveRecord: 0.6ms | Allocations: 5904)
+
+
+Started GET "/" for 127.0.0.1 at 2025-03-04 06:16:24 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 5.5ms | Allocations: 790)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 2.6ms | Allocations: 101)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 34.6ms | Allocations: 11812)
+  Rendered layouts/_footer.html.erb (Duration: 3.4ms | Allocations: 246)
+  Rendered layout layouts/application.html.erb (Duration: 83.5ms | Allocations: 16682)
+Completed 200 OK in 961ms (Views: 91.5ms | ActiveRecord: 4.4ms | Allocations: 302085)
+
+
+Started GET "/login" for 127.0.0.1 at 2025-03-04 06:16:26 +0000
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 15.7ms | Allocations: 1941)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 11)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.2ms | Allocations: 816)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 99)
+  Rendered layout layouts/application.html.erb (Duration: 46.9ms | Allocations: 5357)
+Completed 200 OK in 57ms (Views: 49.4ms | ActiveRecord: 0.5ms | Allocations: 5997)
+
+
+Started POST "/login" for 127.0.0.1 at 2025-03-04 06:16:30 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"hihi@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'hihi@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 189ms (ActiveRecord: 0.4ms | Allocations: 1216)
+
+
+Started GET "/" for 127.0.0.1 at 2025-03-04 06:16:31 +0000
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.4ms | Allocations: 162)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 9)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.3ms | Allocations: 788)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 25.3ms | Allocations: 3662)
+Completed 200 OK in 31ms (Views: 25.7ms | ActiveRecord: 0.4ms | Allocations: 3915)
+
+
+Started GET "/login" for 127.0.0.1 at 2025-03-04 06:16:33 +0000
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 782)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 9)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.1ms | Allocations: 796)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 26.6ms | Allocations: 4100)
+Completed 200 OK in 33ms (Views: 27.0ms | ActiveRecord: 0.4ms | Allocations: 4350)
+
+
+Started POST "/login" for 127.0.0.1 at 2025-03-04 06:16:45 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"tisefec292@lassora.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'tisefec292@lassora.com' LIMIT 1[0m
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 186ms (ActiveRecord: 0.4ms | Allocations: 965)
+
+
+Started GET "/" for 127.0.0.1 at 2025-03-04 06:16:46 +0000
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.3ms | Allocations: 162)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 9)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.4ms | Allocations: 788)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 28.7ms | Allocations: 3669)
+Completed 200 OK in 34ms (Views: 28.9ms | ActiveRecord: 0.5ms | Allocations: 3917)
+
+
+Started GET "/login" for 127.0.0.1 at 2025-03-04 06:16:57 +0000
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 782)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 9)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.4ms | Allocations: 788)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 27.1ms | Allocations: 4089)
+Completed 200 OK in 33ms (Views: 27.4ms | ActiveRecord: 0.5ms | Allocations: 4337)
+
+
+Started POST "/login" for 127.0.0.1 at 2025-03-04 06:17:02 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"tisefec292@lassora.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'tisefec292@lassora.com' LIMIT 1[0m
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 187ms (ActiveRecord: 0.4ms | Allocations: 943)
+
+
+Started GET "/" for 127.0.0.1 at 2025-03-04 06:17:02 +0000
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.4ms | Allocations: 162)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 9)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.4ms | Allocations: 788)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 26.2ms | Allocations: 3643)
+Completed 200 OK in 32ms (Views: 26.4ms | ActiveRecord: 0.4ms | Allocations: 3891)
+
+
