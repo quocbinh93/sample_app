@@ -87,3 +87,17 @@ gem 'rails-controller-testing'
 gem 'bootstrap-sass', '~> 3.3.6'
 
 gem 'hotwire-rails' 
+
+gem 'will_paginate'
+
+gem 'jquery-rails'
+
+gem 'jquery-ui-rails'
+
+gem 'faker'
+
+gem 'bootstrap-will_paginate'
+
+gem 'mini_magick'
+
+gem 'carrierwave'
