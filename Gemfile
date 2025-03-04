@@ -101,3 +101,12 @@ gem 'bootstrap-will_paginate'
 gem 'mini_magick'
 
 gem 'carrierwave'
+
+gem 'active_storage_validations'
+
+gem 'image_processing'
+
+group :production do
+  gem 'pg'
+  gem 'aws-sdk-s3',  require: false
+end
