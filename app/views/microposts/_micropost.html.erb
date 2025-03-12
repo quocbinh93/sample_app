@@ -1,0 +1,47 @@
+<li id="micropost-<%= micropost.id %>">
+  <div class="micropost-header">
+    <%= link_to gravatar_for(micropost.user, size: 50), micropost.user %>
+    <span class="user"><%= link_to micropost.user.name, micropost.user %></span>
+    <span class="timestamp">
+      Posted <%= time_ago_in_words(micropost.created_at) %> ago.
+    </span>
+  </div>
+
+  <div class="content">
+    <%= micropost.content %>
+    <% if micropost.image.attached? %>
+      <div class="image-container">
+        <%= image_tag micropost.image, class: "micropost-image" %>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="micropost-footer">
+    <% if current_user?(micropost.user) %>
+      <%= form_with(model: micropost, method: :delete, class: "d-inline") do |f| %>
+        <%= f.submit "delete", 
+                    class: "btn btn-link p-0 border-0 text-danger", 
+                    data: { turbo_confirm: "You sure?" },
+                    style: "background: none; cursor: pointer;" %>
+      <% end %>
+    <% end %>
+  </div>
+  
+  <div class="comments-section">
+    <% if micropost.comments.any? %>
+      <h4>Comments (<%= micropost.comments.count %>)</h4>
+      <div class="comments">
+        <%= render micropost.comments.where(parent_comment_id: nil) %>
+      </div>
+    <% end %>
+    
+    <% if logged_in? %>
+      <%= form_with(model: [micropost, Comment.new]) do |f| %>
+        <div class="field">
+          <%= f.text_area :content, placeholder: "Write a comment..." %>
+        </div>
+        <%= f.submit "Comment", class: "btn btn-primary" %>
+      <% end %>
+    <% end %>
+  </div>
+</li>

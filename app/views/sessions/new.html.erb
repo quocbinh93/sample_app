@@ -1,0 +1,33 @@
+<% provide(:title, "Log in") %>
+<h1>Đăng nhập</h1>
+
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+    <%= form_with(url: login_path, scope: :session, local: true) do |f| %>
+
+    <%= f.label :email %>
+    <%= f.email_field :email, class: 'form-control' %>
+
+    <%= f.label :password %>
+    <%= link_to "(Quên mật khẩu)", new_password_reset_path %>
+    <%= f.password_field :password, class: 'form-control' %>
+
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+        <label class="form-check-label" for="defaultCheck1">
+        Ghi Nhớ Đăng Nhập
+        </label>
+    </div>
+
+    <%= f.submit "Đăng nhập", class: "btn btn-primary" %>
+    <% end %>
+
+    <div class="github-login mt-3">
+      <%= form_with(url: '/auth/github', method: :post, data: { turbo: false }) do |f| %>
+        <%= f.submit "Sign in with GitHub", class: "btn btn-dark" %>
+      <% end %>
+    </div>
+
+    <p>Người dùng mới? <%= link_to "Đăng ký ngay!", signup_path %></p>
+    </div>
+</div>

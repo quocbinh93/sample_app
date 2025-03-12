@@ -1,0 +1,51 @@
+<header class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <%= link_to "sample app", root_path, id: "logo" %>
+        <nav>
+            <div class="navbar-header">
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <ul class="navbar-nav ml-auto collapse navbar-collapse" id="navbarNav">
+                <li class="nav-item"><%= link_to "Home", root_path, class: "nav-link" %></li>
+                <li class="nav-item"><%= link_to "Help", help_path, class: "nav-link" %></li>
+                <% if logged_in? %>
+                    <li class="nav-item"><%= link_to "Users", users_path, class: "nav-link" %></li>
+                    <li class="nav-item"><%= link_to "Messages", chat_rooms_path %></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Account
+                        </a>
+                        <ul id="dropdown-menu" class="dropdown-menu">
+                            <li><%= link_to "Profile", current_user %></li>
+                            <li><%= link_to "Settings", edit_user_path(current_user) %></li>
+                            <li class="divider"></li>
+                            <li>
+                                <%= form_with(url: logout_path, method: :delete, class: "d-inline") do |f| %>
+                                    <%= f.submit "Log out", 
+                                                    class: "dropdown-item", 
+                                                    style: "
+                                                            cursor: pointer;
+                                                            border: none;
+                                                            text-align: left;
+                                                            font-size: 20.8px;
+                                                            font-weight: 400;
+                                                            padding: 0;
+                                                            color: #808080;
+                                                            line-height: 31.2px;
+                                                            margin: 0;" %>
+                                <% end %>
+                            </li>
+                        </ul>
+                    </li>
+                <% else %>
+                    <li class="nav-item"><%= link_to "Log in", login_path, class: "nav-link" %></li>
+                <% end %>
+            </ul>
+        </nav>
+    </div>
+</header>

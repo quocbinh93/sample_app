@@ -1,0 +1,16 @@
+<div class="chat-room">
+  <div class="messages" id="messages" data-chat-room-id="<%= @chat_room.id %>">
+    <%= render @messages if @messages.any? %>
+  </div>
+
+  <div class="message-form">
+    <%= form_with(model: [@chat_room, @message], 
+                  remote: true,
+                  html: { class: 'message-form' }) do |f| %>
+      <div class="field">
+        <%= f.text_area :content, class: 'form-control' %>
+      </div>
+      <%= f.submit "Send", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

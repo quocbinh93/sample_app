@@ -1,0 +1,13 @@
+<div class="reactions" data-reactable-id="<%= reactable.id %>" data-reactable-type="<%= reactable.class.name %>">
+  <div class="reaction-buttons">
+    <% Reaction.reaction_types.keys.each do |type| %>
+      <%= form_with(model: [reactable, Reaction.new], local: false) do |f| %>
+        <%= f.hidden_field :reaction_type, value: type %>
+        <button type="submit" class="reaction-btn <%= 'active' if reactable.reactions.exists?(user: current_user, reaction_type: type) %>">
+          <%= type.capitalize %> 
+          <span class="count"><%= reactable.reactions.where(reaction_type: type).count %></span>
+        </button>
+      <% end %>
+    <% end %>
+  </div>
+</div>

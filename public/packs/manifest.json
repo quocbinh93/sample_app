@@ -1,0 +1,36 @@
+{
+  "application.js": "/packs/js/application-651e051717f3f3f44e22.js",
+  "application.js.map": "/packs/js/application-651e051717f3f3f44e22.js.map",
+  "custom/comments.js": "/packs/js/custom/comments-f6bdf15af09df6371262.js",
+  "custom/comments.js.map": "/packs/js/custom/comments-f6bdf15af09df6371262.js.map",
+  "custom/reactions.js": "/packs/js/custom/reactions-65e527d5884659423296.js",
+  "custom/reactions.js.map": "/packs/js/custom/reactions-65e527d5884659423296.js.map",
+  "entrypoints": {
+    "application": {
+      "js": [
+        "/packs/js/application-651e051717f3f3f44e22.js"
+      ],
+      "js.map": [
+        "/packs/js/application-651e051717f3f3f44e22.js.map"
+      ]
+    },
+    "custom/comments": {
+      "js": [
+        "/packs/js/custom/comments-f6bdf15af09df6371262.js"
+      ],
+      "js.map": [
+        "/packs/js/custom/comments-f6bdf15af09df6371262.js.map"
+      ]
+    },
+    "custom/reactions": {
+      "js": [
+        "/packs/js/custom/reactions-65e527d5884659423296.js"
+      ],
+      "js.map": [
+        "/packs/js/custom/reactions-65e527d5884659423296.js.map"
+      ]
+    }
+  },
+  "vendors~actioncable.js": "/packs/js/vendors~actioncable-8d8ec9e8262e2016139c.chunk.js",
+  "vendors~actioncable.js.map": "/packs/js/vendors~actioncable-8d8ec9e8262e2016139c.chunk.js.map"
+}

@@ -27,14 +27,17 @@ gem "stimulus-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
+# Boostrap and Sprockets
+gem "bootstrap"
+
 # Use Redis adapter to run Action Cable in production
-# gem "redis", "~> 4.0"
+gem "redis", "~> 4.0"
 
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
-# gem "kredis"
+gem "kredis"
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html]
-# gem "bcrypt", "~> 3.1.7"
+gem "bcrypt", "~> 3.1.7"
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i(mingw mswin x64_mingw jruby)
@@ -43,7 +46,7 @@ gem "tzinfo-data", platforms: %i(mingw mswin x64_mingw jruby)
 gem "bootsnap", require: false
 
 # Use Sass to process CSS
-# gem "sassc-rails"
+gem "sass-rails"
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html]
 # gem "image_processing", "~> 1.2"
@@ -76,3 +79,46 @@ group :test do
   gem "webdrivers"
   gem 'minitest-reporters'
 end
+
+gem 'webpacker', '~> 5.0'
+
+gem 'rails-controller-testing'
+
+gem 'bootstrap-sass', '~> 3.3.6'
+
+gem 'hotwire-rails' 
+
+gem 'jquery-rails'
+
+gem 'jquery-ui-rails'
+
+gem 'faker'
+
+gem 'will_paginate', '~> 3.3.0'
+
+gem 'bootstrap-will_paginate', '1.0.0'
+
+gem 'mini_magick'
+
+gem 'carrierwave'
+
+gem 'active_storage_validations'
+
+gem 'image_processing'
+
+group :production do
+  gem 'pg'
+  gem 'aws-sdk-s3',  require: false
+end
+
+gem 'google-authenticator-rails'
+
+gem 'omniauth'
+
+gem 'omniauth-github', '~> 2.0.0'
+
+gem 'devise'
+
+gem 'omniauth-rails_csrf_protection'
+
+gem 'dotenv-rails', groups: [:development, :test]

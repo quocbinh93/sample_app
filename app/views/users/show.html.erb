@@ -1,0 +1,39 @@
+<% provide(:title, @user.name) %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 offset-md-2">
+      <div class="profile-header text-center">
+        <% if @user.avatar_url.present? %>
+          <%= image_tag @user.avatar_url, class: "github-avatar" , style: "width: 100px; height: 100px;" %>
+        <% end %>
+        <h1><%= @user.name %></h1>
+        
+        <%= link_to "GitHub Profile", @user.github_url, 
+            class: "btn btn-dark github-btn", 
+            target: "_blank" if @user.github_url.present? %>
+        
+        <div class="github-stats">
+          <span><%= pluralize(0, 'follower') %></span>
+          <span><%= pluralize(0, 'following') %></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-8">
+    <%= render 'follow_form' if logged_in? %>
+    <% if @user.microposts.any? %>
+      <h3>Microposts (<%= @user.microposts.count %>)</h3>
+      <ol class="microposts">
+        <%= render @microposts %>
+      </ol>
+      <%= will_paginate @microposts %>
+    <% end %>
+    <% if current_user != @user %>
+      <%= button_to "Message", chat_rooms_path(user_id: @user.id), 
+                    method: :post,
+                    class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
