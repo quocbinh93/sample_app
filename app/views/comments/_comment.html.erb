@@ -1,0 +1,87 @@
+<div class="comment" id="comment-<%= comment.id %>">
+  <div class="comment-header">
+    <%= link_to comment.user.name, comment.user %>
+    <span class="timestamp">
+      Posted <%= time_ago_in_words(comment.created_at) %> ago.
+      <% if current_user?(comment.user) %>
+        <%= form_with(model: [comment.micropost, comment], method: :delete, class: "d-inline") do |f| %>
+          <%= f.submit "delete", 
+                      class: "btn btn-link text-danger p-0 border-0", 
+                      style: "background: none; cursor: pointer;",
+                      data: { turbo_confirm: "You sure?" } %>
+        <% end %>
+      <% end %>
+    </span>
+  </div>
+
+  <div class="comment-content">
+    <%= comment.content %>
+  </div>
+
+  <!-- Reactions với form submission -->
+  <div class="reactions-section">
+    <%= form_with(model: [comment, Reaction.new], 
+                 local: false, # Quan trọng: phải là false để kích hoạt AJAX
+                 data: { 
+                   comment_id: comment.id 
+                 }) do |f| %>
+      <div class="reaction-buttons">
+        <%= button_tag type: 'submit', 
+                      name: 'reaction[reaction_type]', 
+                      value: 'like',
+                      class: 'reaction-btn',
+                      data: { reaction_type: 'like' } do %>
+          👍 <span class="reaction-count">
+            <%= comment.reactions.where(reaction_type: 'like').count %>
+          </span>
+        <% end %>
+        
+        <%= button_tag type: 'submit', 
+                      name: 'reaction[reaction_type]', 
+                      value: 'heart',
+                      class: 'reaction-btn',
+                      data: { reaction_type: 'heart' } do %>
+          ❤️ <span class="reaction-count">
+            <%= comment.reactions.where(reaction_type: 'heart').count %>
+          </span>
+        <% end %>
+        
+        <%= button_tag type: 'submit', name: 'reaction[reaction_type]', value: 'laugh', class: 'reaction-btn' do %>
+          😄 <span class="reaction-count">
+            <%= comment.reactions.where(reaction_type: 'laugh').count %>
+          </span>
+        <% end %>
+
+        <%= button_tag type: 'submit', name: 'reaction[reaction_type]', value: 'sad', class: 'reaction-btn' do %>
+          😢 <span class="reaction-count">
+            <%= comment.reactions.where(reaction_type: 'sad').count %>
+          </span>
+        <% end %>
+
+        <%= button_tag type: 'submit', name: 'reaction[reaction_type]', value: 'angry', class: 'reaction-btn' do %>
+          😠 <span class="reaction-count">
+            <%= comment.reactions.where(reaction_type: 'angry').count %>
+          </span>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+
+  <!-- Thay thế button bằng form reply -->
+  <div class="comment-actions">
+    <%= form_with(model: [comment.micropost, Comment.new], local: true) do |f| %>
+      <div class="field">
+        <%= f.text_area :content, placeholder: "Write your reply..." %>
+        <%= f.hidden_field :parent_comment_id, value: comment.id %>
+      </div>
+      <%= f.submit "Reply", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+
+  <!-- Hiển thị các replies -->
+  <div class="replies" style="margin-left: 20px; border-left: 2px solid #eee; padding-left: 10px;">
+    <% if comment.replies.any? %>
+      <%= render comment.replies %>
+    <% end %>
+  </div>
+</div>

@@ -18,6 +18,10 @@ class User < ApplicationRecord
                     uniqueness: true
   has_secure_password
   validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
+  has_many :comments, dependent: :destroy
+  has_many :chat_room_participants
+  has_many :chat_rooms, through: :chat_room_participants
+  has_many :messages
 
   # Returns the hash digest of the given string.
   def User.digest(string)
@@ -87,9 +91,9 @@ class User < ApplicationRecord
   # Returns a user's status feed.
   def feed
     following_ids = "SELECT followed_id FROM relationships
-                     WHERE  follower_id = :user_id"
+                    WHERE  follower_id = :user_id"
     Micropost.where("user_id IN (#{following_ids})
-                     OR user_id = :user_id", user_id: id)
+                    OR user_id = :user_id", user_id: id)
   end
 
   # Follows a user.
@@ -105,6 +109,18 @@ class User < ApplicationRecord
   # Returns true if the current user is following the other user.
   def following?(other_user)
     following.include?(other_user)
+  end
+
+  def self.from_omniauth(auth)
+    where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
+      user.email = auth.info.email
+      user.password = SecureRandom.hex(15)
+      user.name = auth.info.name
+      user.username = auth.info.nickname
+      user.avatar_url = auth.info.image
+      user.github_url = auth.info.urls&.GitHub
+      user.activated = true
+    end
   end
 
   private

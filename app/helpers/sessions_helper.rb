@@ -17,17 +17,8 @@ module SessionsHelper
 
   # Returns the user corresponding to the remember token cookie.
   def current_user
-    if (user_id = session[:user_id])
-      user = User.find_by(id: user_id)
-      if user && session[:session_token] == user.session_token
-        @current_user = user
-      end
-    elsif (user_id = cookies.encrypted[:user_id])
-      user = User.find_by(id: user_id)
-      if user && user.authenticated?(cookies[:remember_token])
-        log_in user
-        @current_user = user
-      end
+    if session[:user_id]
+      @current_user ||= User.find_by(id: session[:user_id])
     end
   end
 
@@ -51,11 +42,17 @@ module SessionsHelper
   # Logs out the current user.
   def log_out
     forget(current_user)
-    reset_session
+    session.delete(:user_id)
     @current_user = nil
   end
 
-  # Stores the URL trying to be accessed.
+  # Redirects to stored location (or to the default)
+  def redirect_back_or(default)
+    redirect_to(session[:forwarding_url] || default)
+    session.delete(:forwarding_url)
+  end
+
+  # Stores the URL trying to be accessed
   def store_location
     session[:forwarding_url] = request.original_url if request.get?
   end

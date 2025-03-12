@@ -9,6 +9,9 @@
         <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
         <%= javascript_include_tag "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js", defer: true %>
         <%= render 'layouts/shim' %>
+        <%= javascript_importmap_tags %>
+        <%= javascript_include_tag 'application' %>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     </head>
     <body>
         <%= render 'layouts/header' %>
@@ -18,7 +21,6 @@
             <% end %>
             <%= yield %>
             <%= render 'layouts/footer' %>
-            <%= debug(params) if Rails.env.development? %>
         </div>
     </body>
 </html>

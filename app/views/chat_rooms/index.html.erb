@@ -1,0 +1,30 @@
+<div class="chat-rooms-container">
+  <h1>Messages</h1>
+  
+  <% if @chat_rooms.any? %>
+    <div class="chat-rooms-list">
+      <% @chat_rooms.each do |room| %>
+        <div class="chat-room-item">
+          <% other_user = room.users.where.not(id: current_user.id).first %>
+          <%= link_to chat_room_path(room), class: "chat-room-link" do %>
+            <div class="user-info">
+              <%= gravatar_for other_user, size: 50 %>
+              <div class="user-details">
+                <span class="user-name"><%= other_user.name %></span>
+                <% if room.messages.any? %>
+                  <span class="last-message">
+                    <%= truncate(room.messages.last.content, length: 50) %>
+                  </span>
+                <% end %>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  <% else %>
+    <div class="no-messages">
+      <p>No messages yet. Visit a user's profile to start a conversation!</p>
+    </div>
+  <% end %>
+</div>

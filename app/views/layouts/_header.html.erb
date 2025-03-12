@@ -14,6 +14,7 @@
                 <li class="nav-item"><%= link_to "Help", help_path, class: "nav-link" %></li>
                 <% if logged_in? %>
                     <li class="nav-item"><%= link_to "Users", users_path, class: "nav-link" %></li>
+                    <li class="nav-item"><%= link_to "Messages", chat_rooms_path %></li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
@@ -23,7 +24,22 @@
                             <li><%= link_to "Profile", current_user %></li>
                             <li><%= link_to "Settings", edit_user_path(current_user) %></li>
                             <li class="divider"></li>
-                            <%= link_to "Log out", logout_path, method: :get %>
+                            <li>
+                                <%= form_with(url: logout_path, method: :delete, class: "d-inline") do |f| %>
+                                    <%= f.submit "Log out", 
+                                                    class: "dropdown-item", 
+                                                    style: "
+                                                            cursor: pointer;
+                                                            border: none;
+                                                            text-align: left;
+                                                            font-size: 20.8px;
+                                                            font-weight: 400;
+                                                            padding: 0;
+                                                            color: #808080;
+                                                            line-height: 31.2px;
+                                                            margin: 0;" %>
+                                <% end %>
+                            </li>
                         </ul>
                     </li>
                 <% else %>

@@ -1,0 +1,16 @@
+// Cập nhật số lượng reactions cho mỗi loại
+<% %w[like heart laugh sad angry].each do |type| %>
+  document.querySelector('[data-reactable-id="<%= @reactable.id %>"] [data-reaction-type="<%= type %>"] .reaction-count')
+    .textContent = '<%= @reactable.reactions.where(reaction_type: type).count %>';
+<% end %>
+
+// Cập nhật số lượng cho reaction được click
+var commentId = '<%= @reactable.id %>';
+var reactionType = '<%= @reaction&.reaction_type || @existing_reaction&.reaction_type %>';
+var count = '<%= @reactable.reactions.where(reaction_type: reactionType).count %>';
+
+// Tìm và cập nhật số lượng reaction
+var countElement = document.querySelector(`[data-comment-id="${commentId}"] [data-reaction-type="${reactionType}"] .reaction-count`);
+if (countElement) {
+  countElement.textContent = count;
+}

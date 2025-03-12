@@ -1,9 +1,8 @@
 class ApplicationController < ActionController::Base
-  include SessionsHelper
-
+  include SessionsHelper  # Đảm bảo include SessionsHelper
+  
   private
-
-    # Confirms a logged-in user.
+    # Xác nhận user đã đăng nhập
     def logged_in_user
       unless logged_in?
         store_location

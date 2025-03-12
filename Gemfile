@@ -88,15 +88,15 @@ gem 'bootstrap-sass', '~> 3.3.6'
 
 gem 'hotwire-rails' 
 
-gem 'will_paginate'
-
 gem 'jquery-rails'
 
 gem 'jquery-ui-rails'
 
 gem 'faker'
 
-gem 'bootstrap-will_paginate'
+gem 'will_paginate', '~> 3.3.0'
+
+gem 'bootstrap-will_paginate', '1.0.0'
 
 gem 'mini_magick'
 
@@ -110,3 +110,15 @@ group :production do
   gem 'pg'
   gem 'aws-sdk-s3',  require: false
 end
+
+gem 'google-authenticator-rails'
+
+gem 'omniauth'
+
+gem 'omniauth-github', '~> 2.0.0'
+
+gem 'devise'
+
+gem 'omniauth-rails_csrf_protection'
+
+gem 'dotenv-rails', groups: [:development, :test]
