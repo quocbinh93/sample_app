@@ -29396,3 +29396,1436 @@ Processing by ActiveStorage::DiskController#show as JPEG
 Completed 200 OK in 28ms (ActiveRecord: 0.0ms | Allocations: 180)
 
 
+Started GET "/" for ::1 at 2025-03-12 06:57:19 +0000
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[36mMicropost Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts` WHERE `microposts`.`user_id` = 101[0m
+  ↳ app/views/shared/_user_info.html.erb:4
+  Rendered shared/_user_info.html.erb (Duration: 3.0ms | Allocations: 912)
+  [1m[36mUser Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`followed_id` WHERE `relationships`.`follower_id` = 101[0m
+  ↳ app/views/shared/_stats.html.erb:5
+  [1m[36mUser Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`follower_id` WHERE `relationships`.`followed_id` = 101[0m
+  ↳ app/views/shared/_stats.html.erb:11
+  Rendered shared/_stats.html.erb (Duration: 3.7ms | Allocations: 1984)
+  Rendered shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered shared/_micropost_form.html.erb (Duration: 1.4ms | Allocations: 498)
+  [1m[36mMicropost Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts` WHERE (user_id IN (SELECT followed_id FROM relationships
+                    WHERE  follower_id = '101')
+                    OR user_id = '101')[0m
+  ↳ app/views/shared/_feed.html.erb:1
+  [1m[36mMicropost Load (0.5ms)[0m  [1m[34mSELECT `microposts`.* FROM `microposts` WHERE (user_id IN (SELECT followed_id FROM relationships
+                    WHERE  follower_id = '101')
+                    OR user_id = '101') ORDER BY `microposts`.`created_at` DESC LIMIT 10 OFFSET 0[0m
+  ↳ app/views/shared/_feed.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:3
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 308 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 7 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:14
+  [1m[36mComment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 308 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  [1m[36mComment Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `comments` WHERE `comments`.`micropost_id` = 308[0m
+  ↳ app/views/microposts/_micropost.html.erb:32
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`micropost_id` = 308 AND `comments`.`parent_comment_id` IS NULL ORDER BY `comments`.`created_at` DESC[0m
+  ↳ app/views/microposts/_micropost.html.erb:34
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/views/comments/_comment.html.erb:3
+  [1m[36mReaction Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `reactions` WHERE `reactions`.`reactable_id` = 26 AND `reactions`.`reactable_type` = 'Comment' AND `reactions`.`reaction_type` = 'like'[0m
+  ↳ app/views/comments/_comment.html.erb:35
+  [1m[36mReaction Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `reactions` WHERE `reactions`.`reactable_id` = 26 AND `reactions`.`reactable_type` = 'Comment' AND `reactions`.`reaction_type` = 'heart'[0m
+  ↳ app/views/comments/_comment.html.erb:45
+  [1m[36mReaction Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `reactions` WHERE `reactions`.`reactable_id` = 26 AND `reactions`.`reactable_type` = 'Comment' AND `reactions`.`reaction_type` = 'laugh'[0m
+  ↳ app/views/comments/_comment.html.erb:51
+  [1m[36mReaction Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `reactions` WHERE `reactions`.`reactable_id` = 26 AND `reactions`.`reactable_type` = 'Comment' AND `reactions`.`reaction_type` = 'sad'[0m
+  ↳ app/views/comments/_comment.html.erb:57
+  [1m[36mReaction Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `reactions` WHERE `reactions`.`reactable_id` = 26 AND `reactions`.`reactable_type` = 'Comment' AND `reactions`.`reaction_type` = 'angry'[0m
+  ↳ app/views/comments/_comment.html.erb:63
+  [1m[36mComment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`parent_comment_id` = 26 LIMIT 1[0m
+  ↳ app/views/comments/_comment.html.erb:83
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`parent_comment_id` = 26 ORDER BY `comments`.`created_at` DESC[0m
+  ↳ app/views/comments/_comment.html.erb:84
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/views/comments/_comment.html.erb:3
+  [1m[36mMicropost Load (0.3ms)[0m  [1m[34mSELECT `microposts`.* FROM `microposts` WHERE `microposts`.`id` = 308 ORDER BY `microposts`.`created_at` DESC LIMIT 1[0m
+  ↳ app/views/comments/_comment.html.erb:7
+  [1m[36mReaction Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `reactions` WHERE `reactions`.`reactable_id` = 27 AND `reactions`.`reactable_type` = 'Comment' AND `reactions`.`reaction_type` = 'like'[0m
+  ↳ app/views/comments/_comment.html.erb:35
+  [1m[36mReaction Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `reactions` WHERE `reactions`.`reactable_id` = 27 AND `reactions`.`reactable_type` = 'Comment' AND `reactions`.`reaction_type` = 'heart'[0m
+  ↳ app/views/comments/_comment.html.erb:45
+  [1m[36mReaction Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `reactions` WHERE `reactions`.`reactable_id` = 27 AND `reactions`.`reactable_type` = 'Comment' AND `reactions`.`reaction_type` = 'laugh'[0m
+  ↳ app/views/comments/_comment.html.erb:51
+  [1m[36mReaction Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `reactions` WHERE `reactions`.`reactable_id` = 27 AND `reactions`.`reactable_type` = 'Comment' AND `reactions`.`reaction_type` = 'sad'[0m
+  ↳ app/views/comments/_comment.html.erb:57
+  [1m[36mReaction Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `reactions` WHERE `reactions`.`reactable_id` = 27 AND `reactions`.`reactable_type` = 'Comment' AND `reactions`.`reaction_type` = 'angry'[0m
+  ↳ app/views/comments/_comment.html.erb:63
+  [1m[36mComment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`parent_comment_id` = 27 LIMIT 1[0m
+  ↳ app/views/comments/_comment.html.erb:83
+  Rendered collection of comments/_comment.html.erb [1 times] (Duration: 11.9ms | Allocations: 8240)
+  Rendered collection of comments/_comment.html.erb [1 times] (Duration: 25.7ms | Allocations: 16216)
+  Rendered collection of microposts/_micropost.html.erb [1 times] (Duration: 37.6ms | Allocations: 22292)
+  Rendered shared/_feed.html.erb (Duration: 41.0ms | Allocations: 23827)
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 51.3ms | Allocations: 27467)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 699)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 155.7ms | Allocations: 42321)
+Completed 200 OK in 179ms (Views: 149.7ms | ActiveRecord: 7.5ms | Allocations: 43730)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhkV1E1Wm5KeE5tNXphSG8zTUdkME5XMDFhWG96YUhGbWEzY3pOUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpY1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1GdWFDMXRaVzFsTFhacGRDMWpkV010WTNWMFpWOHhNREUwTVRrMU1UVXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkaGJtZ3RiV1Z0WlMxMmFYUXRZM1ZqTFdOMWRHVmZNVEF4TkRFNU5URTFMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZDbXh2WTJGcyIsImV4cCI6IjIwMjUtMDMtMTJUMDY6NTg6MjUuNTg5WiIsInB1ciI6ImJsb2Jfa2V5In19--ba1064379d1577bb16ec3bd9249f784f0206a0c5/anh-meme-vit-cuc-cute_101419515.jpg" for ::1 at 2025-03-12 06:57:20 +0000
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"anh-meme-vit-cuc-cute_101419515"}
+Completed 304 Not Modified in 20ms (ActiveRecord: 0.0ms | Allocations: 169)
+
+
+Started GET "/help" for ::1 at 2025-03-12 06:57:23 +0000
+Processing by StaticPagesController#help as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (Duration: 3.8ms | Allocations: 129)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 9)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.4ms | Allocations: 1283)
+  Rendered layouts/_footer.html.erb (Duration: 0.6ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 120.5ms | Allocations: 15755)
+Completed 200 OK in 141ms (Views: 120.9ms | ActiveRecord: 0.4ms | Allocations: 16091)
+
+
+Started GET "/users" for ::1 at 2025-03-12 06:57:24 +0000
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `users`[0m
+  ↳ app/views/users/index.html.erb:5
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` LIMIT 10 OFFSET 0[0m
+  ↳ app/views/users/index.html.erb:12
+  Rendered collection of users/_user.html.erb [10 times] (Duration: 0.9ms | Allocations: 1183)
+  Rendered users/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 5149)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layouts/_header.html.erb (Duration: 1.7ms | Allocations: 700)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 132.8ms | Allocations: 20007)
+Completed 200 OK in 155ms (Views: 133.0ms | ActiveRecord: 1.1ms | Allocations: 21081)
+
+
+Started GET "/chat_rooms" for ::1 at 2025-03-12 06:57:25 +0000
+Processing by ChatRoomsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering chat_rooms/index.html.erb within layouts/application
+  [1m[36mChatRoom Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM `chat_rooms` INNER JOIN `chat_room_participants` ON `chat_rooms`.`id` = `chat_room_participants`.`chat_room_id` WHERE `chat_room_participants`.`user_id` = 101 LIMIT 1[0m
+  ↳ app/views/chat_rooms/index.html.erb:4
+  [1m[36mChatRoom Load (0.3ms)[0m  [1m[34mSELECT `chat_rooms`.* FROM `chat_rooms` INNER JOIN `chat_room_participants` ON `chat_rooms`.`id` = `chat_room_participants`.`chat_room_id` WHERE `chat_room_participants`.`user_id` = 101[0m
+  ↳ app/views/chat_rooms/index.html.erb:6
+  [1m[36mChatRoomParticipant Load (0.5ms)[0m  [1m[34mSELECT `chat_room_participants`.* FROM `chat_room_participants` WHERE `chat_room_participants`.`chat_room_id` IN (1, 2)[0m
+  ↳ app/views/chat_rooms/index.html.erb:6
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (101, 11, 2)[0m
+  ↳ app/views/chat_rooms/index.html.erb:6
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` INNER JOIN `chat_room_participants` ON `users`.`id` = `chat_room_participants`.`user_id` WHERE `chat_room_participants`.`chat_room_id` = 1 AND `users`.`id` != 101 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/chat_rooms/index.html.erb:8
+  [1m[36mMessage Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `messages` WHERE `messages`.`chat_room_id` = 1 LIMIT 1[0m
+  ↳ app/views/chat_rooms/index.html.erb:14
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`chat_room_id` = 1 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  ↳ app/views/chat_rooms/index.html.erb:16
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` INNER JOIN `chat_room_participants` ON `users`.`id` = `chat_room_participants`.`user_id` WHERE `chat_room_participants`.`chat_room_id` = 2 AND `users`.`id` != 101 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/chat_rooms/index.html.erb:8
+  [1m[36mMessage Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `messages` WHERE `messages`.`chat_room_id` = 2 LIMIT 1[0m
+  ↳ app/views/chat_rooms/index.html.erb:14
+  Rendered chat_rooms/index.html.erb within layouts/application (Duration: 19.5ms | Allocations: 8294)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 11)
+  Rendered layouts/_header.html.erb (Duration: 1.1ms | Allocations: 747)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 99)
+  Rendered layout layouts/application.html.erb (Duration: 136.9ms | Allocations: 23294)
+Completed 200 OK in 162ms (Views: 137.0ms | ActiveRecord: 3.3ms | Allocations: 24911)
+
+
+Started GET "/chat_rooms/2" for ::1 at 2025-03-12 06:57:27 +0000
+Processing by ChatRoomsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mChatRoom Load (0.3ms)[0m  [1m[34mSELECT `chat_rooms`.* FROM `chat_rooms` WHERE `chat_rooms`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/chat_rooms_controller.rb:9:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering chat_rooms/show.html.erb within layouts/application
+  [1m[36mMessage Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `messages` WHERE `messages`.`chat_room_id` = 2 LIMIT 1[0m
+  ↳ app/views/chat_rooms/show.html.erb:3
+  Rendered chat_rooms/show.html.erb within layouts/application (Duration: 5.9ms | Allocations: 1200)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 699)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 110.1ms | Allocations: 16110)
+Completed 200 OK in 134ms (Views: 110.4ms | ActiveRecord: 1.1ms | Allocations: 17862)
+
+
+Started GET "/chat_rooms/1" for ::1 at 2025-03-12 06:57:30 +0000
+Processing by ChatRoomsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mChatRoom Load (0.2ms)[0m  [1m[34mSELECT `chat_rooms`.* FROM `chat_rooms` WHERE `chat_rooms`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/chat_rooms_controller.rb:9:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering chat_rooms/show.html.erb within layouts/application
+  [1m[36mMessage Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `messages` WHERE `messages`.`chat_room_id` = 1 LIMIT 1[0m
+  ↳ app/views/chat_rooms/show.html.erb:3
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`chat_room_id` = 1[0m
+  ↳ app/views/chat_rooms/show.html.erb:3
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101[0m
+  ↳ app/views/chat_rooms/show.html.erb:3
+  Rendered collection of messages/_message.html.erb [2 times] (Duration: 4.1ms | Allocations: 605)
+  Rendered chat_rooms/show.html.erb within layouts/application (Duration: 11.7ms | Allocations: 3316)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layouts/_header.html.erb (Duration: 1.4ms | Allocations: 699)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 114.4ms | Allocations: 18217)
+Completed 200 OK in 135ms (Views: 114.3ms | ActiveRecord: 1.3ms | Allocations: 19892)
+
+
+Started GET "/chat_rooms" for ::1 at 2025-03-12 07:00:20 +0000
+Processing by ChatRoomsController#index as HTML
+  [1m[36mUser Load (11.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering chat_rooms/index.html.erb within layouts/application
+  [1m[36mChatRoom Exists? (3.7ms)[0m  [1m[34mSELECT 1 AS one FROM `chat_rooms` INNER JOIN `chat_room_participants` ON `chat_rooms`.`id` = `chat_room_participants`.`chat_room_id` WHERE `chat_room_participants`.`user_id` = 101 LIMIT 1[0m
+  ↳ app/views/chat_rooms/index.html.erb:4
+  [1m[36mChatRoom Load (0.5ms)[0m  [1m[34mSELECT `chat_rooms`.* FROM `chat_rooms` INNER JOIN `chat_room_participants` ON `chat_rooms`.`id` = `chat_room_participants`.`chat_room_id` WHERE `chat_room_participants`.`user_id` = 101[0m
+  ↳ app/views/chat_rooms/index.html.erb:6
+  [1m[36mChatRoomParticipant Load (0.6ms)[0m  [1m[34mSELECT `chat_room_participants`.* FROM `chat_room_participants` WHERE `chat_room_participants`.`chat_room_id` IN (1, 2)[0m
+  ↳ app/views/chat_rooms/index.html.erb:6
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (101, 11, 2)[0m
+  ↳ app/views/chat_rooms/index.html.erb:6
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` INNER JOIN `chat_room_participants` ON `users`.`id` = `chat_room_participants`.`user_id` WHERE `chat_room_participants`.`chat_room_id` = 1 AND `users`.`id` != 101 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/chat_rooms/index.html.erb:8
+  [1m[36mMessage Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM `messages` WHERE `messages`.`chat_room_id` = 1 LIMIT 1[0m
+  ↳ app/views/chat_rooms/index.html.erb:14
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`chat_room_id` = 1 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  ↳ app/views/chat_rooms/index.html.erb:16
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` INNER JOIN `chat_room_participants` ON `users`.`id` = `chat_room_participants`.`user_id` WHERE `chat_room_participants`.`chat_room_id` = 2 AND `users`.`id` != 101 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/chat_rooms/index.html.erb:8
+  [1m[36mMessage Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `messages` WHERE `messages`.`chat_room_id` = 2 LIMIT 1[0m
+  ↳ app/views/chat_rooms/index.html.erb:14
+  Rendered chat_rooms/index.html.erb within layouts/application (Duration: 54.0ms | Allocations: 7870)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.3ms | Allocations: 9)
+  Rendered layouts/_header.html.erb (Duration: 5.6ms | Allocations: 699)
+  Rendered layouts/_footer.html.erb (Duration: 0.6ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 264.6ms | Allocations: 22726)
+Completed 200 OK in 359ms (Views: 262.4ms | ActiveRecord: 21.2ms | Allocations: 24016)
+
+
+Started GET "/" for ::1 at 2025-03-12 07:00:24 +0000
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[36mMicropost Count (1.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts` WHERE `microposts`.`user_id` = 101[0m
+  ↳ app/views/shared/_user_info.html.erb:4
+  Rendered shared/_user_info.html.erb (Duration: 6.3ms | Allocations: 912)
+  [1m[36mUser Count (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`followed_id` WHERE `relationships`.`follower_id` = 101[0m
+  ↳ app/views/shared/_stats.html.erb:5
+  [1m[36mUser Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`follower_id` WHERE `relationships`.`followed_id` = 101[0m
+  ↳ app/views/shared/_stats.html.erb:11
+  Rendered shared/_stats.html.erb (Duration: 11.5ms | Allocations: 1984)
+  Rendered shared/_error_messages.html.erb (Duration: 0.3ms | Allocations: 13)
+  Rendered shared/_micropost_form.html.erb (Duration: 5.1ms | Allocations: 498)
+  [1m[36mMicropost Count (1.8ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts` WHERE (user_id IN (SELECT followed_id FROM relationships
+                    WHERE  follower_id = '101')
+                    OR user_id = '101')[0m
+  ↳ app/views/shared/_feed.html.erb:1
+  [1m[36mMicropost Load (0.8ms)[0m  [1m[34mSELECT `microposts`.* FROM `microposts` WHERE (user_id IN (SELECT followed_id FROM relationships
+                    WHERE  follower_id = '101')
+                    OR user_id = '101') ORDER BY `microposts`.`created_at` DESC LIMIT 10 OFFSET 0[0m
+  ↳ app/views/shared/_feed.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:3
+  [1m[36mActiveStorage::Attachment Load (1.0ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 308 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mActiveStorage::Blob Load (1.0ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 7 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:14
+  [1m[36mComment Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 308 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  [1m[36mComment Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `comments` WHERE `comments`.`micropost_id` = 308[0m
+  ↳ app/views/microposts/_micropost.html.erb:32
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`micropost_id` = 308 AND `comments`.`parent_comment_id` IS NULL ORDER BY `comments`.`created_at` DESC[0m
+  ↳ app/views/microposts/_micropost.html.erb:34
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/views/comments/_comment.html.erb:3
+  [1m[36mReaction Count (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM `reactions` WHERE `reactions`.`reactable_id` = 26 AND `reactions`.`reactable_type` = 'Comment' AND `reactions`.`reaction_type` = 'like'[0m
+  ↳ app/views/comments/_comment.html.erb:35
+  [1m[36mReaction Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `reactions` WHERE `reactions`.`reactable_id` = 26 AND `reactions`.`reactable_type` = 'Comment' AND `reactions`.`reaction_type` = 'heart'[0m
+  ↳ app/views/comments/_comment.html.erb:45
+  [1m[36mReaction Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `reactions` WHERE `reactions`.`reactable_id` = 26 AND `reactions`.`reactable_type` = 'Comment' AND `reactions`.`reaction_type` = 'laugh'[0m
+  ↳ app/views/comments/_comment.html.erb:51
+  [1m[36mReaction Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `reactions` WHERE `reactions`.`reactable_id` = 26 AND `reactions`.`reactable_type` = 'Comment' AND `reactions`.`reaction_type` = 'sad'[0m
+  ↳ app/views/comments/_comment.html.erb:57
+  [1m[36mReaction Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `reactions` WHERE `reactions`.`reactable_id` = 26 AND `reactions`.`reactable_type` = 'Comment' AND `reactions`.`reaction_type` = 'angry'[0m
+  ↳ app/views/comments/_comment.html.erb:63
+  [1m[36mComment Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`parent_comment_id` = 26 LIMIT 1[0m
+  ↳ app/views/comments/_comment.html.erb:83
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`parent_comment_id` = 26 ORDER BY `comments`.`created_at` DESC[0m
+  ↳ app/views/comments/_comment.html.erb:84
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/views/comments/_comment.html.erb:3
+  [1m[36mMicropost Load (0.3ms)[0m  [1m[34mSELECT `microposts`.* FROM `microposts` WHERE `microposts`.`id` = 308 ORDER BY `microposts`.`created_at` DESC LIMIT 1[0m
+  ↳ app/views/comments/_comment.html.erb:7
+  [1m[36mReaction Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `reactions` WHERE `reactions`.`reactable_id` = 27 AND `reactions`.`reactable_type` = 'Comment' AND `reactions`.`reaction_type` = 'like'[0m
+  ↳ app/views/comments/_comment.html.erb:35
+  [1m[36mReaction Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `reactions` WHERE `reactions`.`reactable_id` = 27 AND `reactions`.`reactable_type` = 'Comment' AND `reactions`.`reaction_type` = 'heart'[0m
+  ↳ app/views/comments/_comment.html.erb:45
+  [1m[36mReaction Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `reactions` WHERE `reactions`.`reactable_id` = 27 AND `reactions`.`reactable_type` = 'Comment' AND `reactions`.`reaction_type` = 'laugh'[0m
+  ↳ app/views/comments/_comment.html.erb:51
+  [1m[36mReaction Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `reactions` WHERE `reactions`.`reactable_id` = 27 AND `reactions`.`reactable_type` = 'Comment' AND `reactions`.`reaction_type` = 'sad'[0m
+  ↳ app/views/comments/_comment.html.erb:57
+  [1m[36mReaction Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `reactions` WHERE `reactions`.`reactable_id` = 27 AND `reactions`.`reactable_type` = 'Comment' AND `reactions`.`reaction_type` = 'angry'[0m
+  ↳ app/views/comments/_comment.html.erb:63
+  [1m[36mComment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`parent_comment_id` = 27 LIMIT 1[0m
+  ↳ app/views/comments/_comment.html.erb:83
+  Rendered collection of comments/_comment.html.erb [1 times] (Duration: 21.8ms | Allocations: 8235)
+  Rendered collection of comments/_comment.html.erb [1 times] (Duration: 56.6ms | Allocations: 16205)
+  Rendered collection of microposts/_micropost.html.erb [1 times] (Duration: 95.4ms | Allocations: 22280)
+  Rendered shared/_feed.html.erb (Duration: 103.9ms | Allocations: 23815)
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 129.1ms | Allocations: 27455)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layouts/_header.html.erb (Duration: 1.0ms | Allocations: 699)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 238.4ms | Allocations: 42308)
+Completed 200 OK in 267ms (Views: 225.1ms | ActiveRecord: 15.3ms | Allocations: 43730)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--8d31917ca0a11016e4d8f7458917c7170f613cc6/anh-meme-vit-cuc-cute_101419515.jpg" for ::1 at 2025-03-12 07:00:24 +0000
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--8d31917ca0a11016e4d8f7458917c7170f613cc6", "filename"=>"anh-meme-vit-cuc-cute_101419515"}
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 7 LIMIT 1[0m
+[36m  Disk Storage (2.8ms) [0m[34mGenerated URL for file at key: ud9frq6nshz70gt5m5iz3hqfkw35 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhkV1E1Wm5KeE5tNXphSG8zTUdkME5XMDFhWG96YUhGbWEzY3pOUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpY1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1GdWFDMXRaVzFsTFhacGRDMWpkV010WTNWMFpWOHhNREUwTVRrMU1UVXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkaGJtZ3RiV1Z0WlMxMmFYUXRZM1ZqTFdOMWRHVmZNVEF4TkRFNU5URTFMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZDbXh2WTJGcyIsImV4cCI6IjIwMjUtMDMtMTJUMDc6MDU6MjQuNjAzWiIsInB1ciI6ImJsb2Jfa2V5In19--780f84cc625321d32c7f8c81887efd55f2d89e50/anh-meme-vit-cuc-cute_101419515.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhkV1E1Wm5KeE5tNXphSG8zTUdkME5XMDFhWG96YUhGbWEzY3pOUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpY1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1GdWFDMXRaVzFsTFhacGRDMWpkV010WTNWMFpWOHhNREUwTVRrMU1UVXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkaGJtZ3RiV1Z0WlMxMmFYUXRZM1ZqTFdOMWRHVmZNVEF4TkRFNU5URTFMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZDbXh2WTJGcyIsImV4cCI6IjIwMjUtMDMtMTJUMDc6MDU6MjQuNjAzWiIsInB1ciI6ImJsb2Jfa2V5In19--780f84cc625321d32c7f8c81887efd55f2d89e50/anh-meme-vit-cuc-cute_101419515.jpg
+Completed 302 Found in 27ms (ActiveRecord: 0.5ms | Allocations: 1392)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhkV1E1Wm5KeE5tNXphSG8zTUdkME5XMDFhWG96YUhGbWEzY3pOUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpY1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1GdWFDMXRaVzFsTFhacGRDMWpkV010WTNWMFpWOHhNREUwTVRrMU1UVXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkaGJtZ3RiV1Z0WlMxMmFYUXRZM1ZqTFdOMWRHVmZNVEF4TkRFNU5URTFMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZDbXh2WTJGcyIsImV4cCI6IjIwMjUtMDMtMTJUMDc6MDU6MjQuNjAzWiIsInB1ciI6ImJsb2Jfa2V5In19--780f84cc625321d32c7f8c81887efd55f2d89e50/anh-meme-vit-cuc-cute_101419515.jpg" for ::1 at 2025-03-12 07:00:24 +0000
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"anh-meme-vit-cuc-cute_101419515"}
+Completed 200 OK in 20ms (ActiveRecord: 0.0ms | Allocations: 180)
+
+
+Started GET "/" for ::1 at 2025-03-12 07:00:25 +0000
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[36mMicropost Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts` WHERE `microposts`.`user_id` = 101[0m
+  ↳ app/views/shared/_user_info.html.erb:4
+  Rendered shared/_user_info.html.erb (Duration: 2.3ms | Allocations: 912)
+  [1m[36mUser Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`followed_id` WHERE `relationships`.`follower_id` = 101[0m
+  ↳ app/views/shared/_stats.html.erb:5
+  [1m[36mUser Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`follower_id` WHERE `relationships`.`followed_id` = 101[0m
+  ↳ app/views/shared/_stats.html.erb:11
+  Rendered shared/_stats.html.erb (Duration: 4.7ms | Allocations: 1984)
+  Rendered shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered shared/_micropost_form.html.erb (Duration: 1.5ms | Allocations: 498)
+  [1m[36mMicropost Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts` WHERE (user_id IN (SELECT followed_id FROM relationships
+                    WHERE  follower_id = '101')
+                    OR user_id = '101')[0m
+  ↳ app/views/shared/_feed.html.erb:1
+  [1m[36mMicropost Load (0.6ms)[0m  [1m[34mSELECT `microposts`.* FROM `microposts` WHERE (user_id IN (SELECT followed_id FROM relationships
+                    WHERE  follower_id = '101')
+                    OR user_id = '101') ORDER BY `microposts`.`created_at` DESC LIMIT 10 OFFSET 0[0m
+  ↳ app/views/shared/_feed.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:3
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 308 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 7 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:14
+  [1m[36mComment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 308 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  [1m[36mComment Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `comments` WHERE `comments`.`micropost_id` = 308[0m
+  ↳ app/views/microposts/_micropost.html.erb:32
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`micropost_id` = 308 AND `comments`.`parent_comment_id` IS NULL ORDER BY `comments`.`created_at` DESC[0m
+  ↳ app/views/microposts/_micropost.html.erb:34
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/views/comments/_comment.html.erb:3
+  [1m[36mReaction Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `reactions` WHERE `reactions`.`reactable_id` = 26 AND `reactions`.`reactable_type` = 'Comment' AND `reactions`.`reaction_type` = 'like'[0m
+  ↳ app/views/comments/_comment.html.erb:35
+  [1m[36mReaction Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `reactions` WHERE `reactions`.`reactable_id` = 26 AND `reactions`.`reactable_type` = 'Comment' AND `reactions`.`reaction_type` = 'heart'[0m
+  ↳ app/views/comments/_comment.html.erb:45
+  [1m[36mReaction Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `reactions` WHERE `reactions`.`reactable_id` = 26 AND `reactions`.`reactable_type` = 'Comment' AND `reactions`.`reaction_type` = 'laugh'[0m
+  ↳ app/views/comments/_comment.html.erb:51
+  [1m[36mReaction Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `reactions` WHERE `reactions`.`reactable_id` = 26 AND `reactions`.`reactable_type` = 'Comment' AND `reactions`.`reaction_type` = 'sad'[0m
+  ↳ app/views/comments/_comment.html.erb:57
+  [1m[36mReaction Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `reactions` WHERE `reactions`.`reactable_id` = 26 AND `reactions`.`reactable_type` = 'Comment' AND `reactions`.`reaction_type` = 'angry'[0m
+  ↳ app/views/comments/_comment.html.erb:63
+  [1m[36mComment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`parent_comment_id` = 26 LIMIT 1[0m
+  ↳ app/views/comments/_comment.html.erb:83
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`parent_comment_id` = 26 ORDER BY `comments`.`created_at` DESC[0m
+  ↳ app/views/comments/_comment.html.erb:84
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/views/comments/_comment.html.erb:3
+  [1m[36mMicropost Load (0.2ms)[0m  [1m[34mSELECT `microposts`.* FROM `microposts` WHERE `microposts`.`id` = 308 ORDER BY `microposts`.`created_at` DESC LIMIT 1[0m
+  ↳ app/views/comments/_comment.html.erb:7
+  [1m[36mReaction Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `reactions` WHERE `reactions`.`reactable_id` = 27 AND `reactions`.`reactable_type` = 'Comment' AND `reactions`.`reaction_type` = 'like'[0m
+  ↳ app/views/comments/_comment.html.erb:35
+  [1m[36mReaction Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `reactions` WHERE `reactions`.`reactable_id` = 27 AND `reactions`.`reactable_type` = 'Comment' AND `reactions`.`reaction_type` = 'heart'[0m
+  ↳ app/views/comments/_comment.html.erb:45
+  [1m[36mReaction Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `reactions` WHERE `reactions`.`reactable_id` = 27 AND `reactions`.`reactable_type` = 'Comment' AND `reactions`.`reaction_type` = 'laugh'[0m
+  ↳ app/views/comments/_comment.html.erb:51
+  [1m[36mReaction Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `reactions` WHERE `reactions`.`reactable_id` = 27 AND `reactions`.`reactable_type` = 'Comment' AND `reactions`.`reaction_type` = 'sad'[0m
+  ↳ app/views/comments/_comment.html.erb:57
+  [1m[36mReaction Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `reactions` WHERE `reactions`.`reactable_id` = 27 AND `reactions`.`reactable_type` = 'Comment' AND `reactions`.`reaction_type` = 'angry'[0m
+  ↳ app/views/comments/_comment.html.erb:63
+  [1m[36mComment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`parent_comment_id` = 27 LIMIT 1[0m
+  ↳ app/views/comments/_comment.html.erb:83
+  Rendered collection of comments/_comment.html.erb [1 times] (Duration: 16.8ms | Allocations: 8235)
+  Rendered collection of comments/_comment.html.erb [1 times] (Duration: 34.1ms | Allocations: 16205)
+  Rendered collection of microposts/_micropost.html.erb [1 times] (Duration: 50.1ms | Allocations: 22276)
+  Rendered shared/_feed.html.erb (Duration: 55.3ms | Allocations: 23811)
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 64.8ms | Allocations: 27451)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layouts/_header.html.erb (Duration: 1.4ms | Allocations: 699)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 173.0ms | Allocations: 42304)
+Completed 200 OK in 194ms (Views: 166.9ms | ActiveRecord: 7.2ms | Allocations: 43706)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhkV1E1Wm5KeE5tNXphSG8zTUdkME5XMDFhWG96YUhGbWEzY3pOUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpY1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1GdWFDMXRaVzFsTFhacGRDMWpkV010WTNWMFpWOHhNREUwTVRrMU1UVXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkaGJtZ3RiV1Z0WlMxMmFYUXRZM1ZqTFdOMWRHVmZNVEF4TkRFNU5URTFMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZDbXh2WTJGcyIsImV4cCI6IjIwMjUtMDMtMTJUMDc6MDU6MjQuNjAzWiIsInB1ciI6ImJsb2Jfa2V5In19--780f84cc625321d32c7f8c81887efd55f2d89e50/anh-meme-vit-cuc-cute_101419515.jpg" for ::1 at 2025-03-12 07:00:25 +0000
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"anh-meme-vit-cuc-cute_101419515"}
+Completed 304 Not Modified in 18ms (ActiveRecord: 0.0ms | Allocations: 167)
+
+
+Started GET "/help" for ::1 at 2025-03-12 07:00:26 +0000
+Processing by StaticPagesController#help as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (Duration: 0.2ms | Allocations: 10)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 9)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 6.9ms | Allocations: 1283)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 225.9ms | Allocations: 15789)
+Completed 200 OK in 246ms (Views: 226.3ms | ActiveRecord: 0.5ms | Allocations: 16068)
+
+
+Started GET "/users" for ::1 at 2025-03-12 07:00:27 +0000
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `users`[0m
+  ↳ app/views/users/index.html.erb:5
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` LIMIT 10 OFFSET 0[0m
+  ↳ app/views/users/index.html.erb:12
+  Rendered collection of users/_user.html.erb [10 times] (Duration: 5.0ms | Allocations: 1183)
+  Rendered users/index.html.erb within layouts/application (Duration: 15.7ms | Allocations: 5149)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layouts/_header.html.erb (Duration: 6.8ms | Allocations: 700)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 138.7ms | Allocations: 20168)
+Completed 200 OK in 159ms (Views: 138.6ms | ActiveRecord: 1.5ms | Allocations: 21254)
+
+
+Started GET "/users/4" for ::1 at 2025-03-12 07:00:29 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:12:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`followed_id` WHERE `relationships`.`follower_id` = 101 AND `users`.`id` = 4 LIMIT 1[0m
+  ↳ app/models/user.rb:111:in `following?'
+  Rendered users/_follow.html.erb (Duration: 4.7ms | Allocations: 699)
+  Rendered users/_follow_form.html.erb (Duration: 14.3ms | Allocations: 2004)
+  [1m[36mMicropost Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `microposts` WHERE `microposts`.`user_id` = 4 LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:26
+  [1m[36mMicropost Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts` WHERE `microposts`.`user_id` = 4[0m
+  ↳ app/views/users/show.html.erb:27
+  [1m[36mMicropost Load (0.4ms)[0m  [1m[34mSELECT `microposts`.* FROM `microposts` WHERE `microposts`.`user_id` = 4 ORDER BY `microposts`.`created_at` DESC LIMIT 10 OFFSET 0[0m
+  ↳ app/views/users/show.html.erb:29
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 298 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mComment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 298 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 292 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mComment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 292 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 286 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mComment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 286 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 280 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mComment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 280 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 274 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mComment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 274 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 268 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mComment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 268 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 262 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mComment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 262 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 256 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mComment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 256 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 250 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mComment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 250 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 244 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mComment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 244 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  Rendered collection of microposts/_micropost.html.erb [10 times] (Duration: 58.2ms | Allocations: 23275)
+  [1m[36mCACHE Micropost Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts` WHERE `microposts`.`user_id` = 4[0m
+  ↳ app/views/users/show.html.erb:31
+  Rendered users/show.html.erb within layouts/application (Duration: 100.1ms | Allocations: 30404)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layouts/_header.html.erb (Duration: 1.3ms | Allocations: 699)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 219.6ms | Allocations: 45261)
+Completed 200 OK in 246ms (Views: 212.8ms | ActiveRecord: 8.0ms | Allocations: 46396)
+
+
+Started POST "/chat_rooms?user_id=4" for ::1 at 2025-03-12 07:00:32 +0000
+Processing by ChatRoomsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user_id"=>"4"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/chat_rooms_controller.rb:15:in `create'
+  [1m[36mChatRoom Load (0.7ms)[0m  [1m[34mSELECT `chat_rooms`.* FROM `chat_rooms` INNER JOIN `chat_room_participants` ON `chat_room_participants`.`chat_room_id` = `chat_rooms`.`id` WHERE `chat_room_participants`.`user_id` IN (101, 4) GROUP BY `chat_rooms`.`id` HAVING (COUNT(DISTINCT chat_room_participants.user_id) = 2) ORDER BY `chat_rooms`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/chat_rooms_controller.rb:29:in `find_or_create_chat_room'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/chat_rooms_controller.rb:35:in `block in find_or_create_chat_room'
+  [1m[36mChatRoom Create (3.1ms)[0m  [1m[32mINSERT INTO `chat_rooms` (`name`, `created_at`, `updated_at`) VALUES (NULL, '2025-03-12 07:00:32.622383', '2025-03-12 07:00:32.622383')[0m
+  ↳ app/controllers/chat_rooms_controller.rb:35:in `block in find_or_create_chat_room'
+  [1m[36mChatRoomParticipant Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `chat_room_participants` WHERE `chat_room_participants`.`chat_room_id` = 3 AND `chat_room_participants`.`user_id` = 101 LIMIT 1[0m
+  ↳ app/controllers/chat_rooms_controller.rb:36:in `block in find_or_create_chat_room'
+  [1m[36mChatRoomParticipant Create (0.9ms)[0m  [1m[32mINSERT INTO `chat_room_participants` (`chat_room_id`, `user_id`, `created_at`, `updated_at`) VALUES (3, 101, '2025-03-12 07:00:32.634882', '2025-03-12 07:00:32.634882')[0m
+  ↳ app/controllers/chat_rooms_controller.rb:36:in `block in find_or_create_chat_room'
+  [1m[36mChatRoomParticipant Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `chat_room_participants` WHERE `chat_room_participants`.`chat_room_id` = 3 AND `chat_room_participants`.`user_id` = 4 LIMIT 1[0m
+  ↳ app/controllers/chat_rooms_controller.rb:37:in `block in find_or_create_chat_room'
+  [1m[36mChatRoomParticipant Create (0.4ms)[0m  [1m[32mINSERT INTO `chat_room_participants` (`chat_room_id`, `user_id`, `created_at`, `updated_at`) VALUES (3, 4, '2025-03-12 07:00:32.641521', '2025-03-12 07:00:32.641521')[0m
+  ↳ app/controllers/chat_rooms_controller.rb:37:in `block in find_or_create_chat_room'
+  [1m[36mTRANSACTION (6.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/chat_rooms_controller.rb:34:in `find_or_create_chat_room'
+Redirected to http://localhost:3000/chat_rooms/3
+Completed 302 Found in 56ms (ActiveRecord: 13.1ms | Allocations: 7823)
+
+
+Started GET "/chat_rooms/3" for ::1 at 2025-03-12 07:00:32 +0000
+Processing by ChatRoomsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mChatRoom Load (0.4ms)[0m  [1m[34mSELECT `chat_rooms`.* FROM `chat_rooms` WHERE `chat_rooms`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/chat_rooms_controller.rb:9:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering chat_rooms/show.html.erb within layouts/application
+  [1m[36mMessage Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `messages` WHERE `messages`.`chat_room_id` = 3 LIMIT 1[0m
+  ↳ app/views/chat_rooms/show.html.erb:3
+  Rendered chat_rooms/show.html.erb within layouts/application (Duration: 4.8ms | Allocations: 954)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layouts/_header.html.erb (Duration: 1.3ms | Allocations: 699)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 141.7ms | Allocations: 15809)
+Completed 200 OK in 166ms (Views: 142.2ms | ActiveRecord: 1.1ms | Allocations: 17489)
+
+
+Started POST "/relationships" for ::1 at 2025-03-12 07:00:40 +0000
+Processing by RelationshipsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "followed_id"=>"4", "commit"=>"Follow"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/relationships_controller.rb:5:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/models/user.rb:101:in `follow'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:101:in `follow'
+  [1m[36mRelationship Create (2.1ms)[0m  [1m[32mINSERT INTO `relationships` (`follower_id`, `followed_id`, `created_at`, `updated_at`) VALUES (101, 4, '2025-03-12 07:00:41.153195', '2025-03-12 07:00:41.153195')[0m
+  ↳ app/models/user.rb:101:in `follow'
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:101:in `follow'
+Redirected to http://localhost:3000/users/4
+Completed 302 Found in 43ms (ActiveRecord: 6.5ms | Allocations: 6385)
+
+
+Started GET "/users/4" for ::1 at 2025-03-12 07:00:41 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:12:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`followed_id` WHERE `relationships`.`follower_id` = 101 AND `users`.`id` = 4 LIMIT 1[0m
+  ↳ app/models/user.rb:111:in `following?'
+  [1m[36mRelationship Load (0.5ms)[0m  [1m[34mSELECT `relationships`.* FROM `relationships` WHERE `relationships`.`follower_id` = 101 AND `relationships`.`followed_id` = 4 LIMIT 1[0m
+  ↳ app/views/users/_unfollow.html.erb:1
+  Rendered users/_unfollow.html.erb (Duration: 8.2ms | Allocations: 1409)
+  Rendered users/_follow_form.html.erb (Duration: 13.0ms | Allocations: 2487)
+  [1m[36mMicropost Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `microposts` WHERE `microposts`.`user_id` = 4 LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:26
+  [1m[36mMicropost Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts` WHERE `microposts`.`user_id` = 4[0m
+  ↳ app/views/users/show.html.erb:27
+  [1m[36mMicropost Load (0.2ms)[0m  [1m[34mSELECT `microposts`.* FROM `microposts` WHERE `microposts`.`user_id` = 4 ORDER BY `microposts`.`created_at` DESC LIMIT 10 OFFSET 0[0m
+  ↳ app/views/users/show.html.erb:29
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 298 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mComment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 298 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 292 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mComment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 292 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 286 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mComment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 286 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 280 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mComment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 280 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 274 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mComment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 274 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 268 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mComment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 268 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 262 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mComment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 262 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 256 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mComment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 256 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 250 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mComment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 250 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 244 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mComment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 244 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  Rendered collection of microposts/_micropost.html.erb [10 times] (Duration: 46.1ms | Allocations: 23253)
+  [1m[36mCACHE Micropost Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts` WHERE `microposts`.`user_id` = 4[0m
+  ↳ app/views/users/show.html.erb:31
+  Rendered users/show.html.erb within layouts/application (Duration: 68.0ms | Allocations: 30432)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 699)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 174.6ms | Allocations: 45288)
+Completed 200 OK in 196ms (Views: 169.0ms | ActiveRecord: 6.6ms | Allocations: 46342)
+
+
+Started DELETE "/relationships/88" for ::1 at 2025-03-12 07:00:42 +0000
+Processing by RelationshipsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Unfollow", "id"=>"88"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mRelationship Load (0.3ms)[0m  [1m[34mSELECT `relationships`.* FROM `relationships` WHERE `relationships`.`id` = 88 LIMIT 1[0m
+  ↳ app/controllers/relationships_controller.rb:14:in `destroy'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/relationships_controller.rb:14:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:106:in `unfollow'
+  [1m[36mRelationship Delete All (0.9ms)[0m  [1m[31mDELETE FROM `relationships` WHERE `relationships`.`follower_id` = 101 AND `relationships`.`followed_id` = 4[0m
+  ↳ app/models/user.rb:106:in `unfollow'
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:106:in `unfollow'
+Redirected to http://localhost:3000/users/4
+Completed 302 Found in 35ms (ActiveRecord: 4.9ms | Allocations: 5731)
+
+
+Started GET "/users/4" for ::1 at 2025-03-12 07:00:43 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:12:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`followed_id` WHERE `relationships`.`follower_id` = 101 AND `users`.`id` = 4 LIMIT 1[0m
+  ↳ app/models/user.rb:111:in `following?'
+  Rendered users/_follow.html.erb (Duration: 2.9ms | Allocations: 518)
+  Rendered users/_follow_form.html.erb (Duration: 5.2ms | Allocations: 1538)
+  [1m[36mMicropost Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `microposts` WHERE `microposts`.`user_id` = 4 LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:26
+  [1m[36mMicropost Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts` WHERE `microposts`.`user_id` = 4[0m
+  ↳ app/views/users/show.html.erb:27
+  [1m[36mMicropost Load (1.6ms)[0m  [1m[34mSELECT `microposts`.* FROM `microposts` WHERE `microposts`.`user_id` = 4 ORDER BY `microposts`.`created_at` DESC LIMIT 10 OFFSET 0[0m
+  ↳ app/views/users/show.html.erb:29
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 298 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mComment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 298 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 292 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mComment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 292 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 286 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mComment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 286 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 280 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mComment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 280 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 274 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mComment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 274 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 268 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mComment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 268 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 262 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mComment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 262 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 256 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mComment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 256 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 250 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mComment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 250 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 244 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mComment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 244 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  Rendered collection of microposts/_micropost.html.erb [10 times] (Duration: 37.7ms | Allocations: 23253)
+  [1m[36mCACHE Micropost Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts` WHERE `microposts`.`user_id` = 4[0m
+  ↳ app/views/users/show.html.erb:31
+  Rendered users/show.html.erb within layouts/application (Duration: 53.2ms | Allocations: 29468)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 699)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 153.9ms | Allocations: 44426)
+Completed 200 OK in 176ms (Views: 147.0ms | ActiveRecord: 8.1ms | Allocations: 45479)
+
+
+Started GET "/users/4" for ::1 at 2025-03-12 07:02:10 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:12:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Count (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`follower_id` WHERE `relationships`.`followed_id` = 4[0m
+  ↳ app/views/users/show.html.erb:32
+  [1m[36mUser Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`followed_id` WHERE `relationships`.`follower_id` = 4[0m
+  ↳ app/views/users/show.html.erb:36
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mUser Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`followed_id` WHERE `relationships`.`follower_id` = 101 AND `users`.`id` = 4 LIMIT 1[0m
+  ↳ app/models/user.rb:111:in `following?'
+  Rendered users/_follow_form.html.erb (Duration: 7.9ms | Allocations: 1808)
+  [1m[36mMicropost Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts` WHERE `microposts`.`user_id` = 4[0m
+  ↳ app/views/users/show.html.erb:52
+  [1m[36mMicropost Load (0.3ms)[0m  [1m[34mSELECT `microposts`.* FROM `microposts` WHERE `microposts`.`user_id` = 4 ORDER BY `microposts`.`created_at` DESC LIMIT 10 OFFSET 0[0m
+  ↳ app/views/users/show.html.erb:54
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 298 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mComment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 298 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 292 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mComment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 292 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 286 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mComment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 286 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 280 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mComment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 280 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 274 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mComment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 274 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 268 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mComment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 268 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 262 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mComment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 262 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 256 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mComment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 256 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 250 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mComment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 250 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 244 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mComment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 244 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  Rendered collection of microposts/_micropost.html.erb [10 times] (Duration: 42.7ms | Allocations: 23793)
+  [1m[36mCACHE Micropost Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts` WHERE `microposts`.`user_id` = 4[0m
+  ↳ app/views/users/show.html.erb:56
+  Rendered users/show.html.erb within layouts/application (Duration: 74.9ms | Allocations: 32162)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 4.1ms | Allocations: 92)
+  Rendered layouts/_header.html.erb (Duration: 6.0ms | Allocations: 1118)
+  Rendered layouts/_footer.html.erb (Duration: 4.3ms | Allocations: 239)
+  Rendered layout layouts/application.html.erb (Duration: 3816.0ms | Allocations: 87267)
+Completed 200 OK in 3854ms (Views: 3816.7ms | ActiveRecord: 9.8ms | Allocations: 89102)
+
+
+Started POST "/relationships" for ::1 at 2025-03-12 07:02:21 +0000
+Processing by RelationshipsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "followed_id"=>"4", "commit"=>"Follow"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/relationships_controller.rb:5:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/models/user.rb:101:in `follow'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:101:in `follow'
+  [1m[36mRelationship Create (0.9ms)[0m  [1m[32mINSERT INTO `relationships` (`follower_id`, `followed_id`, `created_at`, `updated_at`) VALUES (101, 4, '2025-03-12 07:02:22.027432', '2025-03-12 07:02:22.027432')[0m
+  ↳ app/models/user.rb:101:in `follow'
+  [1m[36mTRANSACTION (3.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:101:in `follow'
+Redirected to http://localhost:3000/users/4
+Completed 302 Found in 55ms (ActiveRecord: 5.7ms | Allocations: 5135)
+
+
+Started GET "/users/4" for ::1 at 2025-03-12 07:02:22 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:12:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`follower_id` WHERE `relationships`.`followed_id` = 4[0m
+  ↳ app/views/users/show.html.erb:32
+  [1m[36mUser Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`followed_id` WHERE `relationships`.`follower_id` = 4[0m
+  ↳ app/views/users/show.html.erb:36
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`followed_id` WHERE `relationships`.`follower_id` = 101 AND `users`.`id` = 4 LIMIT 1[0m
+  ↳ app/models/user.rb:111:in `following?'
+  [1m[36mRelationship Load (0.2ms)[0m  [1m[34mSELECT `relationships`.* FROM `relationships` WHERE `relationships`.`follower_id` = 101 AND `relationships`.`followed_id` = 4 LIMIT 1[0m
+  ↳ app/views/users/_follow_form.html.erb:4
+  Rendered users/_follow_form.html.erb (Duration: 4.0ms | Allocations: 2105)
+  [1m[36mMicropost Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts` WHERE `microposts`.`user_id` = 4[0m
+  ↳ app/views/users/show.html.erb:52
+  [1m[36mMicropost Load (0.3ms)[0m  [1m[34mSELECT `microposts`.* FROM `microposts` WHERE `microposts`.`user_id` = 4 ORDER BY `microposts`.`created_at` DESC LIMIT 10 OFFSET 0[0m
+  ↳ app/views/users/show.html.erb:54
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 298 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mComment Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 298 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  [1m[36mActiveStorage::Attachment Load (0.9ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 292 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mComment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 292 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 286 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mComment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 286 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 280 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mComment Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 280 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 274 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mComment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 274 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 268 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mComment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 268 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 262 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mComment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 262 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 256 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mComment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 256 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 250 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mComment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 250 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 244 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mComment Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 244 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  Rendered collection of microposts/_micropost.html.erb [10 times] (Duration: 48.6ms | Allocations: 23251)
+  [1m[36mCACHE Micropost Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts` WHERE `microposts`.`user_id` = 4[0m
+  ↳ app/views/users/show.html.erb:56
+  Rendered users/show.html.erb within layouts/application (Duration: 63.4ms | Allocations: 31312)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 699)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 171.8ms | Allocations: 46333)
+Completed 200 OK in 190ms (Views: 163.3ms | ActiveRecord: 9.5ms | Allocations: 47389)
+
+
+Started DELETE "/relationships/89" for ::1 at 2025-03-12 07:02:23 +0000
+Processing by RelationshipsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Unfollow", "id"=>"89"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mRelationship Load (0.3ms)[0m  [1m[34mSELECT `relationships`.* FROM `relationships` WHERE `relationships`.`id` = 89 LIMIT 1[0m
+  ↳ app/controllers/relationships_controller.rb:14:in `destroy'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/relationships_controller.rb:14:in `destroy'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:106:in `unfollow'
+  [1m[36mRelationship Delete All (0.5ms)[0m  [1m[31mDELETE FROM `relationships` WHERE `relationships`.`follower_id` = 101 AND `relationships`.`followed_id` = 4[0m
+  ↳ app/models/user.rb:106:in `unfollow'
+  [1m[36mTRANSACTION (3.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:106:in `unfollow'
+Redirected to http://localhost:3000/users/4
+Completed 302 Found in 36ms (ActiveRecord: 4.9ms | Allocations: 4385)
+
+
+Started GET "/users/4" for ::1 at 2025-03-12 07:02:23 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:12:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`follower_id` WHERE `relationships`.`followed_id` = 4[0m
+  ↳ app/views/users/show.html.erb:32
+  [1m[36mUser Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`followed_id` WHERE `relationships`.`follower_id` = 4[0m
+  ↳ app/views/users/show.html.erb:36
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`followed_id` WHERE `relationships`.`follower_id` = 101 AND `users`.`id` = 4 LIMIT 1[0m
+  ↳ app/models/user.rb:111:in `following?'
+  Rendered users/_follow_form.html.erb (Duration: 2.4ms | Allocations: 1470)
+  [1m[36mMicropost Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts` WHERE `microposts`.`user_id` = 4[0m
+  ↳ app/views/users/show.html.erb:52
+  [1m[36mMicropost Load (0.3ms)[0m  [1m[34mSELECT `microposts`.* FROM `microposts` WHERE `microposts`.`user_id` = 4 ORDER BY `microposts`.`created_at` DESC LIMIT 10 OFFSET 0[0m
+  ↳ app/views/users/show.html.erb:54
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 298 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mComment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 298 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 292 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mComment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 292 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 286 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mComment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 286 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 280 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mComment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 280 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 274 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mComment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 274 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 268 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mComment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 268 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 262 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mComment Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 262 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 256 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mComment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 256 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 250 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mComment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 250 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 244 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mComment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 244 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  Rendered collection of microposts/_micropost.html.erb [10 times] (Duration: 44.5ms | Allocations: 23251)
+  [1m[36mCACHE Micropost Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts` WHERE `microposts`.`user_id` = 4[0m
+  ↳ app/views/users/show.html.erb:56
+  Rendered users/show.html.erb within layouts/application (Duration: 59.3ms | Allocations: 30650)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layouts/_header.html.erb (Duration: 0.9ms | Allocations: 699)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 172.3ms | Allocations: 45509)
+Completed 200 OK in 193ms (Views: 165.5ms | ActiveRecord: 7.9ms | Allocations: 46562)
+
+
+Started POST "/chat_rooms?user_id=4" for ::1 at 2025-03-12 07:02:24 +0000
+Processing by ChatRoomsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user_id"=>"4"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/chat_rooms_controller.rb:15:in `create'
+  [1m[36mChatRoom Load (0.7ms)[0m  [1m[34mSELECT `chat_rooms`.* FROM `chat_rooms` INNER JOIN `chat_room_participants` ON `chat_room_participants`.`chat_room_id` = `chat_rooms`.`id` WHERE `chat_room_participants`.`user_id` IN (101, 4) GROUP BY `chat_rooms`.`id` HAVING (COUNT(DISTINCT chat_room_participants.user_id) = 2) ORDER BY `chat_rooms`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/chat_rooms_controller.rb:29:in `find_or_create_chat_room'
+Redirected to http://localhost:3000/chat_rooms/3
+Completed 302 Found in 29ms (ActiveRecord: 1.5ms | Allocations: 2291)
+
+
+Started GET "/chat_rooms/3" for ::1 at 2025-03-12 07:02:24 +0000
+Processing by ChatRoomsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mChatRoom Load (0.3ms)[0m  [1m[34mSELECT `chat_rooms`.* FROM `chat_rooms` WHERE `chat_rooms`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/chat_rooms_controller.rb:9:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering chat_rooms/show.html.erb within layouts/application
+  [1m[36mMessage Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM `messages` WHERE `messages`.`chat_room_id` = 3 LIMIT 1[0m
+  ↳ app/views/chat_rooms/show.html.erb:3
+  Rendered chat_rooms/show.html.erb within layouts/application (Duration: 6.2ms | Allocations: 1242)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 11)
+  Rendered layouts/_header.html.erb (Duration: 0.9ms | Allocations: 737)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 99)
+  Rendered layout layouts/application.html.erb (Duration: 118.7ms | Allocations: 16229)
+Completed 200 OK in 145ms (Views: 121.1ms | ActiveRecord: 1.2ms | Allocations: 18234)
+
+
+Started GET "/" for ::1 at 2025-03-12 07:02:50 +0000
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[36mMicropost Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts` WHERE `microposts`.`user_id` = 101[0m
+  ↳ app/views/shared/_user_info.html.erb:4
+  Rendered shared/_user_info.html.erb (Duration: 5.8ms | Allocations: 1100)
+  [1m[36mUser Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`followed_id` WHERE `relationships`.`follower_id` = 101[0m
+  ↳ app/views/shared/_stats.html.erb:5
+  [1m[36mUser Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`follower_id` WHERE `relationships`.`followed_id` = 101[0m
+  ↳ app/views/shared/_stats.html.erb:11
+  Rendered shared/_stats.html.erb (Duration: 7.7ms | Allocations: 2168)
+  Rendered shared/_error_messages.html.erb (Duration: 3.9ms | Allocations: 211)
+  Rendered shared/_micropost_form.html.erb (Duration: 11.1ms | Allocations: 1024)
+  [1m[36mMicropost Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts` WHERE (user_id IN (SELECT followed_id FROM relationships
+                    WHERE  follower_id = '101')
+                    OR user_id = '101')[0m
+  ↳ app/views/shared/_feed.html.erb:1
+  [1m[36mMicropost Load (0.7ms)[0m  [1m[34mSELECT `microposts`.* FROM `microposts` WHERE (user_id IN (SELECT followed_id FROM relationships
+                    WHERE  follower_id = '101')
+                    OR user_id = '101') ORDER BY `microposts`.`created_at` DESC LIMIT 10 OFFSET 0[0m
+  ↳ app/views/shared/_feed.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:3
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 308 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 7 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:14
+  [1m[36mComment Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 308 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  [1m[36mComment Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `comments` WHERE `comments`.`micropost_id` = 308[0m
+  ↳ app/views/microposts/_micropost.html.erb:32
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`micropost_id` = 308 AND `comments`.`parent_comment_id` IS NULL ORDER BY `comments`.`created_at` DESC[0m
+  ↳ app/views/microposts/_micropost.html.erb:34
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/views/comments/_comment.html.erb:3
+  [1m[36mReaction Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM `reactions` WHERE `reactions`.`reactable_id` = 26 AND `reactions`.`reactable_type` = 'Comment' AND `reactions`.`reaction_type` = 'like'[0m
+  ↳ app/views/comments/_comment.html.erb:35
+  [1m[36mReaction Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `reactions` WHERE `reactions`.`reactable_id` = 26 AND `reactions`.`reactable_type` = 'Comment' AND `reactions`.`reaction_type` = 'heart'[0m
+  ↳ app/views/comments/_comment.html.erb:45
+  [1m[36mReaction Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `reactions` WHERE `reactions`.`reactable_id` = 26 AND `reactions`.`reactable_type` = 'Comment' AND `reactions`.`reaction_type` = 'laugh'[0m
+  ↳ app/views/comments/_comment.html.erb:51
+  [1m[36mReaction Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `reactions` WHERE `reactions`.`reactable_id` = 26 AND `reactions`.`reactable_type` = 'Comment' AND `reactions`.`reaction_type` = 'sad'[0m
+  ↳ app/views/comments/_comment.html.erb:57
+  [1m[36mReaction Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `reactions` WHERE `reactions`.`reactable_id` = 26 AND `reactions`.`reactable_type` = 'Comment' AND `reactions`.`reaction_type` = 'angry'[0m
+  ↳ app/views/comments/_comment.html.erb:63
+  [1m[36mComment Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`parent_comment_id` = 26 LIMIT 1[0m
+  ↳ app/views/comments/_comment.html.erb:83
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`parent_comment_id` = 26 ORDER BY `comments`.`created_at` DESC[0m
+  ↳ app/views/comments/_comment.html.erb:84
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/views/comments/_comment.html.erb:3
+  [1m[36mMicropost Load (0.5ms)[0m  [1m[34mSELECT `microposts`.* FROM `microposts` WHERE `microposts`.`id` = 308 ORDER BY `microposts`.`created_at` DESC LIMIT 1[0m
+  ↳ app/views/comments/_comment.html.erb:7
+  [1m[36mReaction Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM `reactions` WHERE `reactions`.`reactable_id` = 27 AND `reactions`.`reactable_type` = 'Comment' AND `reactions`.`reaction_type` = 'like'[0m
+  ↳ app/views/comments/_comment.html.erb:35
+  [1m[36mReaction Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `reactions` WHERE `reactions`.`reactable_id` = 27 AND `reactions`.`reactable_type` = 'Comment' AND `reactions`.`reaction_type` = 'heart'[0m
+  ↳ app/views/comments/_comment.html.erb:45
+  [1m[36mReaction Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `reactions` WHERE `reactions`.`reactable_id` = 27 AND `reactions`.`reactable_type` = 'Comment' AND `reactions`.`reaction_type` = 'laugh'[0m
+  ↳ app/views/comments/_comment.html.erb:51
+  [1m[36mReaction Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `reactions` WHERE `reactions`.`reactable_id` = 27 AND `reactions`.`reactable_type` = 'Comment' AND `reactions`.`reaction_type` = 'sad'[0m
+  ↳ app/views/comments/_comment.html.erb:57
+  [1m[36mReaction Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `reactions` WHERE `reactions`.`reactable_id` = 27 AND `reactions`.`reactable_type` = 'Comment' AND `reactions`.`reaction_type` = 'angry'[0m
+  ↳ app/views/comments/_comment.html.erb:63
+  [1m[36mComment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`parent_comment_id` = 27 LIMIT 1[0m
+  ↳ app/views/comments/_comment.html.erb:83
+  Rendered collection of comments/_comment.html.erb [1 times] (Duration: 18.6ms | Allocations: 8235)
+  Rendered collection of comments/_comment.html.erb [1 times] (Duration: 40.8ms | Allocations: 17081)
+  Rendered collection of microposts/_micropost.html.erb [1 times] (Duration: 57.2ms | Allocations: 23245)
+  Rendered shared/_feed.html.erb (Duration: 65.2ms | Allocations: 24935)
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 107.2ms | Allocations: 29976)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layouts/_header.html.erb (Duration: 1.6ms | Allocations: 717)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 99)
+  Rendered layout layouts/application.html.erb (Duration: 235.9ms | Allocations: 44940)
+Completed 200 OK in 261ms (Views: 228.8ms | ActiveRecord: 10.8ms | Allocations: 46696)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhkV1E1Wm5KeE5tNXphSG8zTUdkME5XMDFhWG96YUhGbWEzY3pOUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpY1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1GdWFDMXRaVzFsTFhacGRDMWpkV010WTNWMFpWOHhNREUwTVRrMU1UVXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkaGJtZ3RiV1Z0WlMxMmFYUXRZM1ZqTFdOMWRHVmZNVEF4TkRFNU5URTFMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZDbXh2WTJGcyIsImV4cCI6IjIwMjUtMDMtMTJUMDc6MDU6MjQuNjAzWiIsInB1ciI6ImJsb2Jfa2V5In19--780f84cc625321d32c7f8c81887efd55f2d89e50/anh-meme-vit-cuc-cute_101419515.jpg" for ::1 at 2025-03-12 07:02:50 +0000
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"anh-meme-vit-cuc-cute_101419515"}
+Completed 304 Not Modified in 22ms (ActiveRecord: 0.0ms | Allocations: 167)
+
+
+Started GET "/users" for ::1 at 2025-03-12 07:02:52 +0000
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `users`[0m
+  ↳ app/views/users/index.html.erb:5
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` LIMIT 10 OFFSET 0[0m
+  ↳ app/views/users/index.html.erb:12
+  Rendered collection of users/_user.html.erb [10 times] (Duration: 3.9ms | Allocations: 1368)
+  Rendered users/index.html.erb within layouts/application (Duration: 15.8ms | Allocations: 5581)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layouts/_header.html.erb (Duration: 1.1ms | Allocations: 700)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 133.4ms | Allocations: 20441)
+Completed 200 OK in 156ms (Views: 133.4ms | ActiveRecord: 1.1ms | Allocations: 21554)
+
+
+Started GET "/users/1" for ::1 at 2025-03-12 07:02:54 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:12:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`follower_id` WHERE `relationships`.`followed_id` = 1[0m
+  ↳ app/views/users/show.html.erb:32
+  [1m[36mUser Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`followed_id` WHERE `relationships`.`follower_id` = 1[0m
+  ↳ app/views/users/show.html.erb:36
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`followed_id` WHERE `relationships`.`follower_id` = 101 AND `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/models/user.rb:111:in `following?'
+  Rendered users/_follow_form.html.erb (Duration: 2.2ms | Allocations: 1464)
+  [1m[36mMicropost Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts` WHERE `microposts`.`user_id` = 1[0m
+  ↳ app/views/users/show.html.erb:52
+  [1m[36mMicropost Load (0.3ms)[0m  [1m[34mSELECT `microposts`.* FROM `microposts` WHERE `microposts`.`user_id` = 1 ORDER BY `microposts`.`created_at` DESC LIMIT 10 OFFSET 0[0m
+  ↳ app/views/users/show.html.erb:54
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 295 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mComment Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 295 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 289 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mComment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 289 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 283 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mComment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 283 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 277 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mComment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 277 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 271 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mComment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 271 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 265 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mComment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 265 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 259 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mComment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 259 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 253 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mComment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 253 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 247 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mComment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 247 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 241 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mComment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 241 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  Rendered collection of microposts/_micropost.html.erb [10 times] (Duration: 38.8ms | Allocations: 23251)
+  [1m[36mCACHE Micropost Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts` WHERE `microposts`.`user_id` = 1[0m
+  ↳ app/views/users/show.html.erb:56
+  Rendered users/show.html.erb within layouts/application (Duration: 52.6ms | Allocations: 30641)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layouts/_header.html.erb (Duration: 1.9ms | Allocations: 699)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 152.1ms | Allocations: 45599)
+Completed 200 OK in 171ms (Views: 144.8ms | ActiveRecord: 8.3ms | Allocations: 46654)
+
+
+Started GET "/users/1" for ::1 at 2025-03-12 07:03:21 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:12:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`follower_id` WHERE `relationships`.`followed_id` = 1[0m
+  ↳ app/views/users/show.html.erb:31
+  [1m[36mUser Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`followed_id` WHERE `relationships`.`follower_id` = 1[0m
+  ↳ app/views/users/show.html.erb:34
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`followed_id` WHERE `relationships`.`follower_id` = 101 AND `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/models/user.rb:111:in `following?'
+  Rendered users/_follow_form.html.erb (Duration: 6.3ms | Allocations: 1817)
+  [1m[36mMicropost Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts` WHERE `microposts`.`user_id` = 1[0m
+  ↳ app/views/users/show.html.erb:50
+  [1m[36mMicropost Load (0.5ms)[0m  [1m[34mSELECT `microposts`.* FROM `microposts` WHERE `microposts`.`user_id` = 1 ORDER BY `microposts`.`created_at` DESC LIMIT 10 OFFSET 0[0m
+  ↳ app/views/users/show.html.erb:52
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 295 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mComment Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 295 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 289 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mComment Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 289 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 283 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mComment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 283 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 277 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mComment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 277 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 271 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mComment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 271 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 265 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mComment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 265 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 259 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mComment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 259 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 253 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mComment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 253 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 247 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mComment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 247 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 241 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mComment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 241 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  Rendered collection of microposts/_micropost.html.erb [10 times] (Duration: 39.7ms | Allocations: 23793)
+  [1m[36mCACHE Micropost Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts` WHERE `microposts`.`user_id` = 1[0m
+  ↳ app/views/users/show.html.erb:54
+  Rendered users/show.html.erb within layouts/application (Duration: 65.8ms | Allocations: 32166)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 2.7ms | Allocations: 92)
+  Rendered layouts/_header.html.erb (Duration: 4.1ms | Allocations: 1122)
+  Rendered layouts/_footer.html.erb (Duration: 2.6ms | Allocations: 239)
+  Rendered layout layouts/application.html.erb (Duration: 3230.5ms | Allocations: 88705)
+Completed 200 OK in 3259ms (Views: 3227.5ms | ActiveRecord: 8.5ms | Allocations: 90541)
+
+
+Started GET "/" for ::1 at 2025-03-12 07:03:31 +0000
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[36mMicropost Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts` WHERE `microposts`.`user_id` = 101[0m
+  ↳ app/views/shared/_user_info.html.erb:4
+  Rendered shared/_user_info.html.erb (Duration: 4.8ms | Allocations: 1100)
+  [1m[36mUser Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`followed_id` WHERE `relationships`.`follower_id` = 101[0m
+  ↳ app/views/shared/_stats.html.erb:5
+  [1m[36mUser Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`follower_id` WHERE `relationships`.`followed_id` = 101[0m
+  ↳ app/views/shared/_stats.html.erb:11
+  Rendered shared/_stats.html.erb (Duration: 7.0ms | Allocations: 2168)
+  Rendered shared/_error_messages.html.erb (Duration: 3.2ms | Allocations: 211)
+  Rendered shared/_micropost_form.html.erb (Duration: 10.0ms | Allocations: 1024)
+  [1m[36mMicropost Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts` WHERE (user_id IN (SELECT followed_id FROM relationships
+                    WHERE  follower_id = '101')
+                    OR user_id = '101')[0m
+  ↳ app/views/shared/_feed.html.erb:1
+  [1m[36mMicropost Load (0.6ms)[0m  [1m[34mSELECT `microposts`.* FROM `microposts` WHERE (user_id IN (SELECT followed_id FROM relationships
+                    WHERE  follower_id = '101')
+                    OR user_id = '101') ORDER BY `microposts`.`created_at` DESC LIMIT 10 OFFSET 0[0m
+  ↳ app/views/shared/_feed.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:3
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 308 AND `active_storage_attachments`.`record_type` = 'Micropost' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:12
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 7 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:14
+  [1m[36mComment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`micropost_id` = 308 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:31
+  [1m[36mComment Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `comments` WHERE `comments`.`micropost_id` = 308[0m
+  ↳ app/views/microposts/_micropost.html.erb:32
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`micropost_id` = 308 AND `comments`.`parent_comment_id` IS NULL ORDER BY `comments`.`created_at` DESC[0m
+  ↳ app/views/microposts/_micropost.html.erb:34
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/views/comments/_comment.html.erb:3
+  [1m[36mReaction Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `reactions` WHERE `reactions`.`reactable_id` = 26 AND `reactions`.`reactable_type` = 'Comment' AND `reactions`.`reaction_type` = 'like'[0m
+  ↳ app/views/comments/_comment.html.erb:35
+  [1m[36mReaction Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `reactions` WHERE `reactions`.`reactable_id` = 26 AND `reactions`.`reactable_type` = 'Comment' AND `reactions`.`reaction_type` = 'heart'[0m
+  ↳ app/views/comments/_comment.html.erb:45
+  [1m[36mReaction Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `reactions` WHERE `reactions`.`reactable_id` = 26 AND `reactions`.`reactable_type` = 'Comment' AND `reactions`.`reaction_type` = 'laugh'[0m
+  ↳ app/views/comments/_comment.html.erb:51
+  [1m[36mReaction Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `reactions` WHERE `reactions`.`reactable_id` = 26 AND `reactions`.`reactable_type` = 'Comment' AND `reactions`.`reaction_type` = 'sad'[0m
+  ↳ app/views/comments/_comment.html.erb:57
+  [1m[36mReaction Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `reactions` WHERE `reactions`.`reactable_id` = 26 AND `reactions`.`reactable_type` = 'Comment' AND `reactions`.`reaction_type` = 'angry'[0m
+  ↳ app/views/comments/_comment.html.erb:63
+  [1m[36mComment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`parent_comment_id` = 26 LIMIT 1[0m
+  ↳ app/views/comments/_comment.html.erb:83
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`parent_comment_id` = 26 ORDER BY `comments`.`created_at` DESC[0m
+  ↳ app/views/comments/_comment.html.erb:84
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/views/comments/_comment.html.erb:3
+  [1m[36mMicropost Load (0.4ms)[0m  [1m[34mSELECT `microposts`.* FROM `microposts` WHERE `microposts`.`id` = 308 ORDER BY `microposts`.`created_at` DESC LIMIT 1[0m
+  ↳ app/views/comments/_comment.html.erb:7
+  [1m[36mReaction Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `reactions` WHERE `reactions`.`reactable_id` = 27 AND `reactions`.`reactable_type` = 'Comment' AND `reactions`.`reaction_type` = 'like'[0m
+  ↳ app/views/comments/_comment.html.erb:35
+  [1m[36mReaction Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `reactions` WHERE `reactions`.`reactable_id` = 27 AND `reactions`.`reactable_type` = 'Comment' AND `reactions`.`reaction_type` = 'heart'[0m
+  ↳ app/views/comments/_comment.html.erb:45
+  [1m[36mReaction Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `reactions` WHERE `reactions`.`reactable_id` = 27 AND `reactions`.`reactable_type` = 'Comment' AND `reactions`.`reaction_type` = 'laugh'[0m
+  ↳ app/views/comments/_comment.html.erb:51
+  [1m[36mReaction Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `reactions` WHERE `reactions`.`reactable_id` = 27 AND `reactions`.`reactable_type` = 'Comment' AND `reactions`.`reaction_type` = 'sad'[0m
+  ↳ app/views/comments/_comment.html.erb:57
+  [1m[36mReaction Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `reactions` WHERE `reactions`.`reactable_id` = 27 AND `reactions`.`reactable_type` = 'Comment' AND `reactions`.`reaction_type` = 'angry'[0m
+  ↳ app/views/comments/_comment.html.erb:63
+  [1m[36mComment Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` WHERE `comments`.`parent_comment_id` = 27 LIMIT 1[0m
+  ↳ app/views/comments/_comment.html.erb:83
+  Rendered collection of comments/_comment.html.erb [1 times] (Duration: 13.5ms | Allocations: 8235)
+  Rendered collection of comments/_comment.html.erb [1 times] (Duration: 31.4ms | Allocations: 17082)
+  Rendered collection of microposts/_micropost.html.erb [1 times] (Duration: 46.3ms | Allocations: 23246)
+  Rendered shared/_feed.html.erb (Duration: 53.3ms | Allocations: 24936)
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 90.0ms | Allocations: 29977)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 9)
+  Rendered layouts/_header.html.erb (Duration: 1.2ms | Allocations: 717)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 99)
+  Rendered layout layouts/application.html.erb (Duration: 193.0ms | Allocations: 45081)
+Completed 200 OK in 218ms (Views: 187.5ms | ActiveRecord: 8.6ms | Allocations: 46850)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhkV1E1Wm5KeE5tNXphSG8zTUdkME5XMDFhWG96YUhGbWEzY3pOUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpY1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1GdWFDMXRaVzFsTFhacGRDMWpkV010WTNWMFpWOHhNREUwTVRrMU1UVXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkaGJtZ3RiV1Z0WlMxMmFYUXRZM1ZqTFdOMWRHVmZNVEF4TkRFNU5URTFMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZDbXh2WTJGcyIsImV4cCI6IjIwMjUtMDMtMTJUMDc6MDU6MjQuNjAzWiIsInB1ciI6ImJsb2Jfa2V5In19--780f84cc625321d32c7f8c81887efd55f2d89e50/anh-meme-vit-cuc-cute_101419515.jpg" for ::1 at 2025-03-12 07:03:31 +0000
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"anh-meme-vit-cuc-cute_101419515"}
+Completed 304 Not Modified in 18ms (ActiveRecord: 0.0ms | Allocations: 169)
+
+
+Started GET "/help" for ::1 at 2025-03-12 07:03:32 +0000
+Processing by StaticPagesController#help as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (Duration: 3.8ms | Allocations: 128)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 9)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 3.5ms | Allocations: 1283)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 113.6ms | Allocations: 15743)
+Completed 200 OK in 133ms (Views: 114.1ms | ActiveRecord: 0.4ms | Allocations: 16078)
+
+
+Started GET "/users" for ::1 at 2025-03-12 07:03:33 +0000
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `users`[0m
+  ↳ app/views/users/index.html.erb:5
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` LIMIT 10 OFFSET 0[0m
+  ↳ app/views/users/index.html.erb:12
+  Rendered collection of users/_user.html.erb [10 times] (Duration: 4.4ms | Allocations: 1368)
+  Rendered users/index.html.erb within layouts/application (Duration: 16.3ms | Allocations: 5581)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layouts/_header.html.erb (Duration: 0.9ms | Allocations: 700)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 118.5ms | Allocations: 20443)
+Completed 200 OK in 140ms (Views: 118.4ms | ActiveRecord: 1.2ms | Allocations: 21560)
+
+
+Started GET "/users" for ::1 at 2025-03-12 07:04:25 +0000
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 101 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` LIMIT 10 OFFSET 0[0m
+  ↳ app/views/users/index.html.erb:5
+  Rendered collection of users/_user.html.erb [10 times] (Duration: 4.1ms | Allocations: 1410)
+  [1m[36mUser Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `users`[0m
+  ↳ app/views/users/index.html.erb:9
+  Rendered users/index.html.erb within layouts/application (Duration: 14.2ms | Allocations: 4447)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 2.9ms | Allocations: 94)
+  Rendered layouts/_header.html.erb (Duration: 4.5ms | Allocations: 1143)
+  Rendered layouts/_footer.html.erb (Duration: 3.3ms | Allocations: 239)
+  Rendered layout layouts/application.html.erb (Duration: 144.2ms | Allocations: 20624)
+Completed 200 OK in 172ms (Views: 149.2ms | ActiveRecord: 1.2ms | Allocations: 22455)
+
+
